@@ -1,4 +1,4 @@
-const router = require('express').Router
+const router = require('express').Router()
 const mockPortfolioController = require('../controllers/mockPortfolioController')
 const portfolioController = require('../controllers/portfolioController')
 const userController = require('../controllers/userController')
