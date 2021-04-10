@@ -5,6 +5,7 @@ import {
 } from "react-router-dom"
 
 // importing pages
+import Welcome from './pages/welcome/welcome'
 import Home from './pages/home'
 import About from './pages/about'
 import Dashboard from './pages/dashboard'
@@ -18,6 +19,9 @@ function App() {
     <Router>
       <Nav />
       <Switch>
+      <Route path="/welcome">
+          <Welcome />
+        </Route>
         <Route path="/about">
           <About />
         </Route>
