@@ -7,7 +7,7 @@ class Welcome extends React.Component {
         return (
             <div className="wrapper">
                 <div className="container">
-                    <h1>Welcome</h1>
+                    <h1 className="welcome-title">Welcome</h1>
 
                     <form className="form">
                         <input type="text" placeholder="Username"></input>
@@ -16,16 +16,16 @@ class Welcome extends React.Component {
                     </form>
                 </div>
                 <ul className="bg-bubbles">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li className="square"></li>
+                    <li className="square"></li>
+                    <li className="square"></li>
+                    <li className="square"></li>
+                    <li className="square"></li>
+                    <li className="square"></li>
+                    <li className="square"></li>
+                    <li className="square"></li>
+                    <li className="square"></li>
+                    <li className="square"></li>
                 </ul>
 
             </div>

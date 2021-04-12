@@ -19,9 +19,9 @@ function App() {
     <Router>
       <Nav />
       <Switch>
-      <Route path="/welcome">
+      {/* <Route path="/welcome">
           <Welcome />
-        </Route>
+        </Route> */}
         <Route path="/about">
           <About />
         </Route>
@@ -32,7 +32,7 @@ function App() {
           <Investments />
         </Route>
         <Route path='/'>
-          <Home />
+          <Welcome />
         </Route>
       </Switch>
     </Router>
