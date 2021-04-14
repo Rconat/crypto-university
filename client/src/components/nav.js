@@ -14,14 +14,20 @@ const Nav = () => (
                         <Link to="/" className="nav-link active" aria-current="page" href="#">Welcome</Link>
                     </li>
                     <li className="nav-item">
+                        <Link to="/prices" className="nav-link" href="#">Prices</Link>
+                    </li>
+                    <li className="nav-item">
                         <Link to="/dashboard" className="nav-link" href="#">Dashboard</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/Syllabus" className="nav-link" href="#">Syllabus</Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/investments" className="nav-link" href="#">Investments</Link>
                     </li>
-                    {/* <li className="nav-item">
-                        <Link to="/welcome" className="nav-link" href="#">Welcome</Link>
-                    </li> */}
+                    <li>
+                        <button>Logout</button>
+                    </li>
                 </ul>
             </div>
         </div>
