@@ -19,9 +19,6 @@ function App() {
     <Router>
       <Nav />
       <Switch>
-      {/* <Route path="/welcome">
-          <Welcome />
-        </Route> */}
         <Route path="/about">
           <About />
         </Route>
