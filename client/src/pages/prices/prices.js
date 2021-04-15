@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
-import API from './../utils/API.js';
+import API from './../../utils/API.js';
 
 const Investments = () => {
     const id = useRef(0);
