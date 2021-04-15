@@ -1,10 +1,10 @@
 import React from 'react'
-import ReactToPrint from 'react-to-print'
 
 
 const Diploma = () => {
+
     return(
-        <div className = 'container diploma-container'>
+        <div className = 'diploma-container'>
             <img src="../assets/diploma.jpg" alt="Diploma" />
         </div>
     )
