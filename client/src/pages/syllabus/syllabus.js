@@ -1,7 +1,10 @@
 import React from 'react'
+import Diploma from '../../components/diploma'
 
 const Syllabus = () => (
-    <div>SYLLABUS</div>
+    <>
+        <Diploma />
+    </>
 )
 
 export default Syllabus
