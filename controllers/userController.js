@@ -1,5 +1,3 @@
-const db = require('../models')
-
 module.exports = {
     createUser: function(req, res) {
 

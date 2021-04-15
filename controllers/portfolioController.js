@@ -1,4 +1,3 @@
-const db = require('../models')
 
 module.exports = {
     createPortfolio: function(req, res) {

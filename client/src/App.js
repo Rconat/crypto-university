@@ -6,11 +6,12 @@ import {
 
 // importing pages
 import Welcome from './pages/welcome/welcome'
+import Home from './pages/home'
 import About from './pages/about/about'
 import Dashboard from './pages/dashboard/dashboard'
 import Investments from './pages/investments/investments'
 import Syllabus from './pages/syllabus/syllabus'
-import Prices from './pages/prices/prices'
+import Prices from './pages/prices/prices';
 
 // importing components
 import Nav from './components/nav'
@@ -34,6 +35,9 @@ function App() {
         </Route>
         <Route path="/investments">
           <Investments />
+        </Route>
+        <Route path="/prices">
+          <Prices />
         </Route>
         <Route path='/'>
           <Welcome />
