@@ -1,28 +1,22 @@
 import React from 'react'
-import ReactDOM from 'react-dom';
 import './welcome.css'
 
+const Welcome = () =>  {
+    return (
+        <div className="body-container">
+            <div className="jumbotron">
+                <h1>Crypto University</h1>
+                <p>Your guide to understanding crypto currency</p>
+            </div>
+            <div className="container">
+                <h1 className="welcome-title">Welcome</h1>
 
-
-class Welcome extends React.Component {
-
-    render() {
-        return (
-            <div className="body-container">
-                <div className="jumbotron">
-                    <h1>Crypto University</h1>
-                    <p>Your guide to understanding crypto currency</p>
-                </div>
+                <form className="form">
+                    <input type="text" placeholder="Username"></input>
+                    <input type="text" placeholder="Password"></input>
+                    <button type="submit" id="login-button">Login</button>
+                </form>
                 <div className="wrapper">
-                    <div className="container">
-                        <h1 className="welcome-title">Welcome</h1>
-
-                        <form className="form">
-                            <input type="text" placeholder="Username"></input>
-                            <input type="text" placeholder="Password"></input>
-                            <button type="submit" id="login-button">Login</button>
-                        </form>
-                    </div>
                     <ul className="bg-bubbles">
                         <li className="logo">
                             <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=010" alt="Bitcoin"></img>
@@ -74,9 +68,8 @@ class Welcome extends React.Component {
                     </ul>
                 </div>
             </div>
-
-        )
-    }
+        </div>
+    )
 }
 
 export default Welcome

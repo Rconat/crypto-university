@@ -1,7 +1,8 @@
 {
   "name": "crypto-university",
-  "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:3001/",
+  "version": "0.1.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.10",
     "@testing-library/react": "^11.2.6",
@@ -11,6 +12,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-to-print": "^2.12.4",
+    "animejs": "^3.2.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {
