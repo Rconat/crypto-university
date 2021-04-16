@@ -1,10 +1,9 @@
-const db = require('../models')
 
 module.exports = {
-    createMockPortfolio: function(req, res) {
+    getMockPortfolio: function(req, res) {
 
     },
-    getMockPortfolio: function(req, res) {
+    createMockPortfolio: function(req, res) {
 
     },
     updateMockPortfolio: function(req, res) {
