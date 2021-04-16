@@ -66,7 +66,7 @@ const Investments = () => {
             price: item.price,
             change: item['1d'].price_change,
             volume: item['1d'].volume,
-            marketCap: item['1d'].market_cap_change,
+            marketCap: item.market_cap,
             supply: item.max_supply,
         }))
     }
