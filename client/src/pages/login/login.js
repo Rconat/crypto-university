@@ -1,23 +1,18 @@
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import './welcome.css'
+import './login.css'
 
-const Welcome = () => {
+const Login = () => {
 
     const emailRef = useRef()
     const passwordRef = useRef()
-    const passwordConfirmRef = useRef()
     const { signup } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
 
     async function handleSubmit(e) {
         e.preventDefault()
-
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Passwords do not match')
-        }
 
         try {
             setError('')
@@ -36,16 +31,15 @@ const Welcome = () => {
                 <p>Your guide to understanding crypto currency</p>
             </div>
             <div className="container">
-                <h1 className="sign-up-text">Sign Up</h1>
+                <h1 className="sign-up-text">Log In</h1>
                 {error && <alert variant="danger">{error}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
                     <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
-                    <input id="password-confirm" type="password" ref={passwordConfirmRef} placeholder="Confirm Password" required></input>
-                    <button disabled={loading} type="submit" id="sign-up-button">Sign Up</button>
+                    <button disabled={loading} type="submit" id="log-in-button">Log In</button>
                 </form>
                 <div className="login-text">
-                    Already have an account? <Link to="/login">Log In</Link>
+                    Need an account? <Link to="/">Sign Up</Link>
                 </div>
                 <div className="wrapper">
                     <ul className="bg-bubbles">
@@ -103,4 +97,4 @@ const Welcome = () => {
     )
 }
 
-export default Welcome
+export default Login
