@@ -43,18 +43,18 @@ const Investments = () => {
                 header: 'Market cap',
                 field: 'marketCap',
                 // content: (row) => {
-                    // This returns the current row object, 
-                    // Allowing you to override default value of a field 
-                    // You need to return a Html element within content
-                    // return <h1 style={{ background: 'red'}}>{row.marketCap}</h1>
+                // This returns the current row object, 
+                // Allowing you to override default value of a field 
+                // You need to return a Html element within content
+                // return <h1 style={{ background: 'red'}}>{row.marketCap}</h1>
                 // }
             },
             {
                 header: 'Supply',
                 field: 'supply',
                 // style: {
-                    // this styles will be add the the current column cell
-                    // color: 'lightgreen'
+                // this styles will be add the the current column cell
+                // color: 'lightgreen'
                 // }
             }
         ]
@@ -64,21 +64,21 @@ const Investments = () => {
         return prices.map((item) => ({
             name: item.name,
             price: item.price,
-            change: item['1d'].price_change,
-            volume: item['1d'].volume,
+            change: item['1d']?.price_change,
+            volume: item['1d']?.volume,
             marketCap: item.market_cap,
             supply: item.max_supply,
         }))
-    }
-    return (
-        <>
-            <div>PRICES</div>
-            <Table
-                columns={columns()}
-                rows={rows()}
-            />
-        </>
-    )
+}
+return (
+    <>
+        <div>PRICES</div>
+        <Table
+            columns={columns()}
+            rows={rows()}
+        />
+    </>
+)
 };
 
 
