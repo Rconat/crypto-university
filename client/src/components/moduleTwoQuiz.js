@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const ModuleOneQuiz = () => {
+const ModuleTwoQuiz = () => {
     const questions = [
         {
             questionText: "What is data hashing",
@@ -91,3 +91,5 @@ const ModuleOneQuiz = () => {
         },
     ];
 }
+
+export default ModuleTwoQuiz
