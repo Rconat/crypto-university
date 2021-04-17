@@ -10,6 +10,7 @@ import About from './pages/about/about';
 import Dashboard from './pages/dashboard/dashboard';
 import Investments from './pages/investments/investments';
 import Syllabus from './pages/syllabus/syllabus';
+import Quiz from './pages/quiz/quiz';
 import Prices from './pages/prices/prices';
 
 // importing components
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/prices">
           <Prices />
+        </Route>
+        <Route path="/quiz/:id">
+          <Quiz />
         </Route>
         <Route path="/syllabus">
           <Syllabus />

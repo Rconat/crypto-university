@@ -28,7 +28,8 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.12.3"
+    "mongoose": "^5.12.3",
+    "uuid": "^8.3.2"
   },
   "bugs": {
     "url": "https://github.com/Rconat/crypto-university/issues"
