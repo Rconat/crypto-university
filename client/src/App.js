@@ -19,9 +19,9 @@ import { AuthProvider } from "./contexts/AuthContext"
 
 function App() {
   return (
-    <AuthProvider>
-      <Router>
-        <Nav />
+    <Router>
+      <Nav />
+      <AuthProvider>
         <Switch>
           <Route path="/about">
             <About />
@@ -45,8 +45,8 @@ function App() {
             <Welcome />
           </Route>
         </Switch>
-      </Router>
-    </AuthProvider>
+      </AuthProvider>
+    </Router>
   );
 }
 

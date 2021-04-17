@@ -1,5 +1,4 @@
 import React, { useRef, useState } from 'react'
-// import { AuthProvider } from '../../contexts/AuthContext'
 import { useAuth } from '../../contexts/AuthContext'
 import './welcome.css'
 
@@ -37,7 +36,7 @@ const Welcome = () => {
             </div>
             <div className="container">
                 <h1 className="sign-up-text">Sign Up</h1>
-                {error && <Alert variant="danger">{error}</Alert>}
+                {error && <alert variant="danger">{error}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
                     <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
