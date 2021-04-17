@@ -83,7 +83,7 @@ const ModuleTwoQuestions = () => {
             {
                 questionText: "Due to how a blockchain is structured, it is used:",
                 correctAnswer: "to track information as it changes over time",
-                answerOptions: [
+                answers: [
                     'to track information as it changes over time',
                     'to tell who currently is holding data regardless of where it came from',
                     'to remove precious sets of data',
