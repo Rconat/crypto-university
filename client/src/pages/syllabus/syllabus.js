@@ -48,6 +48,7 @@ const Syllabus = () => {
         }
     }, [])
     return (
+        <>
         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
             {syllabi.map((item) => (
                 <div style={{ background: item.color, color: 'white' }} onClick={event => {
@@ -57,14 +58,17 @@ const Syllabus = () => {
                 </div>
             ))}
         </div>
+        
+        <ReactToPrint
+            trigger={() => <button>Print Diploma</button>}
+            content={() => componentRef.current}
+        />
+        <Diploma ref={componentRef}/>
+        
+    </>
     )
 }
 
+
 export default Syllabus
 
-
-//     <ReactToPrint
-//         trigger={() => <button>Print Diploma</button>}
-//         content={() => componentRef.current}
-//     />
-//     <Diploma ref={componentRef}/>
