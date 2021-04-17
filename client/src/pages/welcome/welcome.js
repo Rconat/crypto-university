@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import './welcome.css'
+import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
 
 const Welcome = () => {
 
@@ -25,10 +26,13 @@ const Welcome = () => {
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
             history.push('/dashboard')
-        } catch {
-            setError('Failed to create an account')
+        } catch (error){
+            console.log(error.message)
+            setError(error.message)
         }
         setLoading(false)
+
+
     }
 
     return (
@@ -39,7 +43,7 @@ const Welcome = () => {
             </div>
             <div className="container">
                 <h1 className="sign-up-text">Sign Up</h1>
-                {error && <alert variant="danger">{error}</alert>}
+                {error && <alert className="alert" variant="danger">{error}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
                     <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
@@ -97,6 +101,9 @@ const Welcome = () => {
                         </li>
                         <li className="logo">
                             <img src="https://cryptologos.cc/logos/sushiswap-sushi-logo.svg?v=010" alt="SushiSwap"></img>
+                        </li>
+                        <li className="logo">
+                            <img src={FlyingLogo} alt="Crypto University"></img>
                         </li>
                     </ul>
                 </div>
