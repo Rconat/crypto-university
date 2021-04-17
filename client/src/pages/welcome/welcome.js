@@ -1,67 +1,103 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
+// import { AuthProvider } from '../../contexts/AuthContext'
+import { useAuth } from '../../contexts/AuthContext'
 import './welcome.css'
 
 const Welcome = () => {
+
+    const emailRef = useRef()
+    const passwordRef = useRef()
+    const passwordConfirmRef = useRef()
+    const { signup } = useAuth()
+    const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
+
+    async function handleSubmit(e) {
+        e.preventDefault()
+
+        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+            return setError('Passwords do not match')
+        }
+
+        try {
+            setError('')
+            setLoading(true)
+            await signup(emailRef.current.value, passwordRef.current.value)
+        } catch {
+            setError('Failed to create an account')
+        }
+        setLoading(false)
+    }
+
     return (
-        // <div>
-        //     <h3>test</h3>
-        // </div>
         <div className="body-container">
             <div className="jumbotron">
                 <h1>Crypto University</h1>
                 <p>Your guide to understanding crypto currency</p>
             </div>
+            <div className="container">
+                <h1 className="sign-up-text">Sign Up</h1>
+                {error && <Alert variant="danger">{error}</Alert>}
+                <form onSubmit={handleSubmit} className="form">
+                    <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
+                    <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
+                    <input id="password-confirm" type="password" ref={passwordConfirmRef} placeholder="Confirm Password" required></input>
+                    <button disabled={loading} type="submit" id="sign-up-button">Sign Up</button>
+                </form>
+                <div className="login-text">
+                    Already have an account? Log In
+                </div>
+                <div className="wrapper">
+                    <ul className="bg-bubbles">
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=010" alt="Bitcoin"></img>
 
-            <div className="wrapper">
-                <ul className="bg-bubbles">
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/bitcoin-btc-logo.svg?v=010" alt="Bitcoin"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=010" alt="Ethereum"></img>
 
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/ethereum-eth-logo.svg?v=010" alt="Ethereum"></img>
-
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/tether-usdt-logo.svg?v=010" alt="Tether"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/cardano-ada-logo.svg?v=010" alt="Cardano"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/polkadot-new-dot-logo.svg?v=010" alt="Polkadot"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/cosmos-atom-logo.svg?v=010" alt="Cosmos"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.svg?v=010" alt="Binance Coin"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/xrp-xrp-logo.svg?v=010" alt="XRP"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/uniswap-uni-logo.svg?v=010" alt="Uniswap"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.svg?v=010" alt="Dogecoin"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/litecoin-ltc-logo.svg?v=010" alt="Litecoin"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/chainlink-link-logo.svg?v=010" alt="Chainlink"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/stellar-xlm-logo.svg?v=010" alt="Stellar"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010" alt="VeChain"></img>
-                    </li>
-                    <li className="logo">
-                        <img src="https://cryptologos.cc/logos/sushiswap-sushi-logo.svg?v=010" alt="SushiSwap"></img>
-                    </li>
-                </ul>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/tether-usdt-logo.svg?v=010" alt="Tether"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/cardano-ada-logo.svg?v=010" alt="Cardano"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/polkadot-new-dot-logo.svg?v=010" alt="Polkadot"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/cosmos-atom-logo.svg?v=010" alt="Cosmos"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/binance-coin-bnb-logo.svg?v=010" alt="Binance Coin"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/xrp-xrp-logo.svg?v=010" alt="XRP"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/uniswap-uni-logo.svg?v=010" alt="Uniswap"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/dogecoin-doge-logo.svg?v=010" alt="Dogecoin"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/litecoin-ltc-logo.svg?v=010" alt="Litecoin"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/chainlink-link-logo.svg?v=010" alt="Chainlink"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/stellar-xlm-logo.svg?v=010" alt="Stellar"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/vechain-vet-logo.svg?v=010" alt="VeChain"></img>
+                        </li>
+                        <li className="logo">
+                            <img src="https://cryptologos.cc/logos/sushiswap-sushi-logo.svg?v=010" alt="SushiSwap"></img>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     )

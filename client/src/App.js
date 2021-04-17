@@ -15,38 +15,38 @@ import Prices from './pages/prices/prices';
 
 // importing components
 import Nav from './components/nav'
+import { AuthProvider } from "./contexts/AuthContext"
 
 function App() {
   return (
-    <Router>
-      <Nav />
-      <Switch>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/prices">
-          <Prices />
-        </Route>
-        <Route path="/quiz/:id">
-          <Quiz />
-        </Route>
-        <Route path="/syllabus">
-          <Syllabus />
-        </Route>
-        <Route path="/dashboard">
-          <Dashboard />
-        </Route>
-        <Route path="/investments">
-          <Investments />
-        </Route>
-        <Route path="/prices">
-          <Prices />
-        </Route>
-        <Route path='/'>
-          <Welcome />
-        </Route>
-      </Switch>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <Nav />
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/prices">
+            <Prices />
+          </Route>
+          <Route path="/syllabus">
+            <Syllabus />
+          </Route>
+          <Route path="/dashboard">
+            <Dashboard />
+          </Route>
+          <Route path="/investments">
+            <Investments />
+          </Route>
+          <Route path="/quiz/:id">
+            <Quiz />
+          </Route>
+          <Route path='/'>
+            <Welcome />
+          </Route>
+        </Switch>
+      </Router>
+    </AuthProvider>
   );
 }
 

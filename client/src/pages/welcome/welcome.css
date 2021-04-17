@@ -23,7 +23,8 @@
 	min-width: 100%;
 }
 
-.welcome-title {
+.sign-up-text {
+	margin-top: 15px;
 	position: relative;
 	z-index: 2;
     font-size: 40px;
@@ -87,6 +88,15 @@ button {
 
 button:hover {
     background-color: rgb(245, 247, 249);
+}
+
+.login-text {
+	position: relative;
+	z-index: 2;
+	font-weight: 200;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	padding: 10px;
 }
 
 .bg-bubbles {
