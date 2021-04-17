@@ -20,7 +20,7 @@ const Nav = () => (
                         <Link to="/dashboard" className="nav-link" href="#">Dashboard</Link>
                     </li>
                     <li className="nav-item">
-                        <Link to="/Syllabus" className="nav-link" href="#">Syllabus</Link>
+                        <Link to="/syllabus" className="nav-link" href="#">Syllabus</Link>
                     </li>
                     <li className="nav-item">
                         <Link to="/investments" className="nav-link" href="#">Investments</Link>
