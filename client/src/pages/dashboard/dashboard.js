@@ -1,9 +1,16 @@
 import React from 'react'
+import { useAuth } from '../../contexts/AuthContext'
 
 const Dashboard = () => {
+
+    const { currentUser } = useAuth()
+
+
     return(
         <>
             <div>DASHBOARD</div>
+            <br />
+            <strong>Welcome </strong> {currentUser.email}
             <br />
             <div id="progress-container container">
                 <div id="row">

@@ -2,6 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Nav = () => (
+
+    // function handleLogout(){
+
+    // }
+
+
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
             <Link to="/about" className="navbar-brand" href="#">Crypto University</Link>
@@ -25,9 +31,9 @@ const Nav = () => (
                     <li className="nav-item">
                         <Link to="/prices" className="nav-link" href="#">Prices</Link>
                     </li>
-                    <li>
-                        <button>Logout</button>
-                    </li>
+                    {/* <li>
+                        <button variant="link" onClick={handleLogout}>Logout</button>
+                    </li> */}
                 </ul>
             </div>
         </div>
