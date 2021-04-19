@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { useAuth } from '../contexts/AuthContext'
+import { useAuth } from '../../contexts/AuthContext'
+import './nav.css'
 
 const Nav = () => {
 
@@ -41,11 +42,11 @@ const Nav = () => {
                         <li className="nav-item">
                             <Link to="/prices" className="nav-link" href="#">Prices</Link>
                         </li>
-                        <li>
-                            <button variant="link" onClick={handleLogout}>Logout</button>
-                            {error && <alert className="alert" variant="danger">{error}</alert>}
-                        </li>
                     </ul>
+                </div>
+                <div>
+                    <button className="logout-btn btn" variant="link" onClick={handleLogout}>Log Out</button>
+                    {error && <alert className="alert" variant="danger">{error}</alert>}
                 </div>
             </div>
         </nav>

@@ -1,0 +1,21 @@
+.navbar {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav-item {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.logout-btn {
+    color: black;
+    background-color: #53e3a6;
+    font-family: 'Quicksand', sans-serif;
+    width: 100px;
+    
+}
+
+.logout-btn:hover {
+    background-color: #50a3a2;
+}
+

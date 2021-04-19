@@ -89,6 +89,7 @@ button {
 	transition-duration: 0.25s;
 	color: #53e3a6;
 	opacity: 90%;
+	font-family: 'Quicksand', sans-serif;
 }
 
 button:hover {

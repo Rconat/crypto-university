@@ -16,7 +16,7 @@ import Prices from './pages/prices/prices';
 
 
 // importing components
-import Nav from './components/nav'
+import Nav from './components/nav/nav'
 import { AuthProvider } from './contexts/AuthContext'
 import PrivateRoute from './components/privateRoute'
 
@@ -26,9 +26,6 @@ function App() {
       <AuthProvider>
         <Nav />
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
           <Route path="/quiz/:id">
             <Quiz />
           </Route>
@@ -38,6 +35,7 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
+          <PrivateRoute path="/about" component={About} />
           <PrivateRoute path="/prices" component={Prices} />
           <PrivateRoute path="/syllabus" component={Syllabus} />
           <PrivateRoute path="/investments" component={Investments} />
