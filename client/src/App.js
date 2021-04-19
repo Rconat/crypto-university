@@ -24,19 +24,10 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-      <Nav />
+        <Nav />
         <Switch>
           <Route path="/about">
             <About />
-          </Route>
-          <Route path="/prices">
-            <Prices />
-          </Route>
-          <Route path="/syllabus">
-            <Syllabus />
-          </Route>
-          <Route path="/investments">
-            <Investments />
           </Route>
           <Route path="/quiz/:id">
             <Quiz />
@@ -47,7 +38,10 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <PrivateRoute exact path='/' component={Dashboard}/>
+          <PrivateRoute path="/prices" component={Prices} />
+          <PrivateRoute path="/syllabus" component={Syllabus} />
+          <PrivateRoute path="/investments" component={Investments} />
+          <PrivateRoute exact path='/' component={Dashboard} />
         </Switch>
       </AuthProvider>
     </Router>
