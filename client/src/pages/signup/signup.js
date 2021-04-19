@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import './welcome.css'
+import './signup.css'
 import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
 
-const Welcome = () => {
+const Signup = () => {
 
     const emailRef = useRef()
     const passwordRef = useRef()
@@ -26,7 +26,7 @@ const Welcome = () => {
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value)
             history.push('/dashboard')
-        } catch (error){
+        } catch (error) {
             console.log(error.message)
             setError(error.message)
         }
@@ -112,4 +112,4 @@ const Welcome = () => {
     )
 }
 
-export default Welcome
+export default Signup

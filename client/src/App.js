@@ -6,7 +6,7 @@ import {
 
 // importing pages
 import Login from './pages/login/login'
-import Welcome from './pages/welcome/welcome';
+import Signup from './pages/signup/signup';
 import About from './pages/about/about';
 import Dashboard from './pages/dashboard/dashboard';
 import Investments from './pages/investments/investments';
@@ -17,13 +17,14 @@ import Prices from './pages/prices/prices';
 
 // importing components
 import Nav from './components/nav'
-import { AuthProvider } from "./contexts/AuthContext"
+import { AuthProvider } from './contexts/AuthContext'
+import PrivateRoute from './components/privateRoute'
 
 function App() {
   return (
     <Router>
-      <Nav />
       <AuthProvider>
+      <Nav />
         <Switch>
           <Route path="/about">
             <About />
@@ -34,21 +35,19 @@ function App() {
           <Route path="/syllabus">
             <Syllabus />
           </Route>
-          <Route path="/dashboard">
-            <Dashboard />
-          </Route>
           <Route path="/investments">
             <Investments />
           </Route>
           <Route path="/quiz/:id">
             <Quiz />
           </Route>
+          <Route path="/signup">
+            <Signup />
+          </Route>
           <Route path="/login">
             <Login />
           </Route>
-          <Route path='/'>
-            <Welcome />
-          </Route>
+          <PrivateRoute exact path='/' component={Dashboard}/>
         </Switch>
       </AuthProvider>
     </Router>

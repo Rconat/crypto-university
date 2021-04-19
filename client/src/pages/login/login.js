@@ -19,7 +19,7 @@ const Login = () => {
             setError('')
             setLoading(true)
             await login(emailRef.current.value, passwordRef.current.value)
-            history.push('/dashboard')
+            history.push('/')
         } catch {
             setError('Failed to sign in')
         }
@@ -41,7 +41,7 @@ const Login = () => {
                     <button disabled={loading} type="submit" id="log-in-button">Log In</button>
                 </form>
                 <div className="login-text">
-                    Need an account? <Link to="/">Sign Up</Link>
+                    Need an account? <Link to="/signup">Sign Up</Link>
                 </div>
                 <div className="wrapper">
                     <ul className="bg-bubbles">
