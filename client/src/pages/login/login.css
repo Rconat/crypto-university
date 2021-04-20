@@ -225,6 +225,11 @@ button:hover {
 	animation-delay: 2s;
 }
 
+.logo:nth-child(16){
+    left: 70%;
+	animation-delay: 2s;
+}
+
 @-webkit-keyframes logo {
     0% {
 		transform: translateY(0);

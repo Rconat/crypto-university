@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
+import FlyingLogoSmall from '../../assets/logos/cu_logo_72x72.png'
 import './nav.css'
 
 const Nav = () => {
@@ -24,7 +25,10 @@ const Nav = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <div className="container-fluid">
-                <Link to="/about" className="navbar-brand" href="#">Crypto University</Link>
+                <Link to="/about" className="navbar-brand
+                cu-about hvr-grow" href="#">
+                    <img src={FlyingLogoSmall} alt="Crypto University"></img>
+                </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>

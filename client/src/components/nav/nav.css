@@ -2,9 +2,37 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
+    transform: scale(1.1);
+}
+
+.cu-about {
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .nav-item {
-    margin-left: 10px;
     margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.nav-item:hover {
+    background-color: #53e3a6;
 }
 
 .logout-btn {

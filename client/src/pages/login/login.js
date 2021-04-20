@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
+import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
 import './login.css'
 
 const Login = () => {
@@ -91,6 +92,9 @@ const Login = () => {
                         </li>
                         <li className="logo">
                             <img src="https://cryptologos.cc/logos/sushiswap-sushi-logo.svg?v=010" alt="SushiSwap"></img>
+                        </li>
+                        <li className="logo">
+                            <img src={FlyingLogo} alt="Crypto University"></img>
                         </li>
                     </ul>
                 </div>
