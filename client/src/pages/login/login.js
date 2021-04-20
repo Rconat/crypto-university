@@ -35,7 +35,8 @@ const Login = () => {
             </div>
             <div className="container">
                 <h1 className="sign-up-text">Log In</h1>
-                {error && <alert variant="danger">{error}</alert>}
+                <br/>
+                {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
                     <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>

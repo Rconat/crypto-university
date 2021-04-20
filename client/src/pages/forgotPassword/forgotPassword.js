@@ -35,8 +35,9 @@ const ForgotPassword = () => {
             </div>
             <div className="container">
                 <h1 className="sign-up-text">Password Reset</h1>
-                {error && <alert variant="danger">{error}</alert>}
-                {message && <alert variant="success">{message}</alert>}
+                <br/>
+                {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
+                {message && <alert className="alert alert-success" role="alert">{message}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
                     <button disabled={loading} type="submit" id="log-in-button">Reset Password</button>
