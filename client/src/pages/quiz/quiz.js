@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import FetchQuestions from '../../components/questions'
-
+// import { useParams } from 'react-router-dom'
 const Quiz = () => {
 	//Fetch Call we will store date
 	const [id] = useState(FetchQuestions().id);
+	// const {id} = useParams()
 	const [questions] = useState(FetchQuestions().questions);
 	const [question, setQuestion] = useState(0);
 	const [showScore, setShowScore] = useState(false);

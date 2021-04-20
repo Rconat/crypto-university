@@ -26,6 +26,9 @@ const runSeeder = async () => {
         await Quiz.deleteMany({})
         // code to seed DB
         await Syllabus.insertMany({ syllabus: SyllabusData })
+        // insert a collection of documents instead of just { syllabus: SyllabusData }
+        // have no clue right now
+        // one way of it looking at it: ([{},{},{}] instead of {[{},{},{}]} (check out 3001/api/syllabus for reference))
     } catch(err) {
         throw err
     }

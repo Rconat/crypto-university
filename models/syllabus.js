@@ -16,3 +16,5 @@ const SyllabusSchema = new Schema({
 const Syllabus = mongoose.model('Syllabus', SyllabusSchema)
 
 module.exports = Syllabus;
+
+// might have to tweak this model 
