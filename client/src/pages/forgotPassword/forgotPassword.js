@@ -1,28 +1,28 @@
 import React, { useRef, useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
-import './login.css'
+import './forgotPassword.css'
 
-const Login = () => {
+const ForgotPassword = () => {
 
     const emailRef = useRef()
-    const passwordRef = useRef()
-    const { login } = useAuth()
+    const { resetPassword } = useAuth()
     const [error, setError] = useState('')
+    const [message, setMessage] = useState('')
     const [loading, setLoading] = useState(false)
-    const history = useHistory()
 
     async function handleSubmit(e) {
         e.preventDefault()
 
         try {
+            setMessage('')
             setError('')
             setLoading(true)
-            await login(emailRef.current.value, passwordRef.current.value)
-            history.push('/')
+            await resetPassword(emailRef.current.value)
+            setMessage('Check your inbox for further instructions')
         } catch {
-            setError('Failed to sign in')
+            setError('Failed to reset password')
         }
         setLoading(false)
     }
@@ -34,15 +34,15 @@ const Login = () => {
                 <p>Your guide to understanding crypto currency</p>
             </div>
             <div className="container">
-                <h1 className="sign-up-text">Log In</h1>
+                <h1 className="sign-up-text">Password Reset</h1>
                 {error && <alert variant="danger">{error}</alert>}
+                {message && <alert variant="success">{message}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
-                    <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
-                    <button disabled={loading} type="submit" id="log-in-button">Log In</button>
+                    <button disabled={loading} type="submit" id="log-in-button">Reset Password</button>
                 </form>
                 <div className="login-text">
-                    <Link to="/forgot-password">Forgot Password?</Link>
+                    <Link to="/login">Login</Link>
                 </div>
                 <div className="login-text">
                     Need an account? <Link to="/signup">Sign Up</Link>
@@ -106,4 +106,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default ForgotPassword

@@ -1,10 +1,15 @@
+// routing
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom"
+import PrivateRoute from './components/privateRoute'
 
-// importing pages
+// firebase authentication
+import { AuthProvider } from './contexts/AuthContext'
+
+// pages
 import Login from './pages/login/login'
 import Signup from './pages/signup/signup';
 import About from './pages/about/about';
@@ -13,12 +18,10 @@ import Investments from './pages/investments/investments';
 import Syllabus from './pages/syllabus/syllabus';
 import Quiz from './pages/quiz/quiz';
 import Prices from './pages/prices/prices';
+import ForgotPassword from './pages/forgotPassword/forgotPassword'
 
-
-// importing components
+// components
 import Nav from './components/nav/nav'
-import { AuthProvider } from './contexts/AuthContext'
-import PrivateRoute from './components/privateRoute'
 
 function App() {
   return (
@@ -26,15 +29,10 @@ function App() {
       <AuthProvider>
         <Nav />
         <Switch>
-          <Route path="/quiz/:id">
-            <Quiz />
-          </Route>
-          <Route path="/signup">
-            <Signup />
-          </Route>
-          <Route path="/login">
-            <Login />
-          </Route>
+          <Route path="/signup" component={Signup} />
+          <Route path="/login" component={Login} />
+          <Route path="/forgot-password" component={ForgotPassword} />
+          <PrivateRoute path="/quiz/:id" component={Quiz} />
           <PrivateRoute path="/about" component={About} />
           <PrivateRoute path="/prices" component={Prices} />
           <PrivateRoute path="/syllabus" component={Syllabus} />
