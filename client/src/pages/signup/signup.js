@@ -1,14 +1,15 @@
 import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
+import './signup.css'
 import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
-import './login.css'
 
-const Login = () => {
+const Signup = () => {
 
     const emailRef = useRef()
     const passwordRef = useRef()
-    const { login } = useAuth()
+    const passwordConfirmRef = useRef()
+    const { signup } = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
@@ -16,13 +17,18 @@ const Login = () => {
     async function handleSubmit(e) {
         e.preventDefault()
 
+        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
+            return setError('Passwords do not match')
+        }
+
         try {
             setError('')
             setLoading(true)
-            await login(emailRef.current.value, passwordRef.current.value)
-            history.push('/')
-        } catch {
-            setError('Failed to sign in')
+            await signup(emailRef.current.value, passwordRef.current.value)
+            history.push('/dashboard')
+        } catch (error) {
+            console.log(error.message)
+            setError(error.message)
         }
         setLoading(false)
     }
@@ -34,19 +40,17 @@ const Login = () => {
                 <p>Your guide to understanding crypto currency</p>
             </div>
             <div className="container">
-                <h1 className="sign-up-text">Log In</h1>
+                <h1 className="sign-up-text">Sign Up</h1>
                 <br/>
                 {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
                     <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
-                    <button disabled={loading} type="submit" id="log-in-button">Log In</button>
+                    <input id="password-confirm" type="password" ref={passwordConfirmRef} placeholder="Confirm Password" required></input>
+                    <button disabled={loading} type="submit" id="sign-up-button">Sign Up</button>
                 </form>
                 <div className="login-text">
-                    <Link to="/forgot-password">Forgot Password?</Link>
-                </div>
-                <div className="login-text">
-                    Need an account? <Link to="/signup">Sign Up</Link>
+                    Already have an account? <Link to="/login">Log In</Link>
                 </div>
                 <div className="wrapper">
                     <ul className="bg-bubbles">
@@ -107,4 +111,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default Signup

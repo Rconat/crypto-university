@@ -1,38 +1,30 @@
 import React, { useRef, useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import './welcome.css'
 import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
+import './forgotPassword.css'
 
-const Welcome = () => {
+const ForgotPassword = () => {
 
     const emailRef = useRef()
-    const passwordRef = useRef()
-    const passwordConfirmRef = useRef()
-    const { signup } = useAuth()
+    const { resetPassword } = useAuth()
     const [error, setError] = useState('')
+    const [message, setMessage] = useState('')
     const [loading, setLoading] = useState(false)
-    const history = useHistory()
 
     async function handleSubmit(e) {
         e.preventDefault()
 
-        if (passwordRef.current.value !== passwordConfirmRef.current.value) {
-            return setError('Passwords do not match')
-        }
-
         try {
+            setMessage('')
             setError('')
             setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
-            history.push('/dashboard')
-        } catch (error){
-            console.log(error.message)
-            setError(error.message)
+            await resetPassword(emailRef.current.value)
+            setMessage('Check your inbox for further instructions')
+        } catch {
+            setError('Failed to reset password')
         }
         setLoading(false)
-
-
     }
 
     return (
@@ -42,16 +34,19 @@ const Welcome = () => {
                 <p>Your guide to understanding crypto currency</p>
             </div>
             <div className="container">
-                <h1 className="sign-up-text">Sign Up</h1>
-                {error && <alert className="alert" variant="danger">{error}</alert>}
+                <h1 className="sign-up-text">Password Reset</h1>
+                <br/>
+                {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
+                {message && <alert className="alert alert-success" role="alert">{message}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
-                    <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
-                    <input id="password-confirm" type="password" ref={passwordConfirmRef} placeholder="Confirm Password" required></input>
-                    <button disabled={loading} type="submit" id="sign-up-button">Sign Up</button>
+                    <button disabled={loading} type="submit" id="log-in-button">Reset Password</button>
                 </form>
                 <div className="login-text">
-                    Already have an account? <Link to="/login">Log In</Link>
+                    <Link to="/login">Login</Link>
+                </div>
+                <div className="login-text">
+                    Need an account? <Link to="/signup">Sign Up</Link>
                 </div>
                 <div className="wrapper">
                     <ul className="bg-bubbles">
@@ -112,4 +107,4 @@ const Welcome = () => {
     )
 }
 
-export default Welcome
+export default ForgotPassword
