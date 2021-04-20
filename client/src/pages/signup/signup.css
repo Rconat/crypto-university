@@ -1,9 +1,14 @@
+.alert {
+	z-index: 2;
+}
+
 .jumbotron {
 	text-align: center;
 	margin-top: 15px;
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 200;
 }
+
 
 .wrapper {
 	position: relative;
@@ -23,7 +28,8 @@
 	min-width: 100%;
 }
 
-.welcome-title {
+.sign-up-text {
+	margin-top: 15px;
 	position: relative;
 	z-index: 2;
     font-size: 40px;
@@ -83,10 +89,20 @@ button {
 	transition-duration: 0.25s;
 	color: #53e3a6;
 	opacity: 90%;
+	font-family: 'Quicksand', sans-serif;
 }
 
 button:hover {
     background-color: rgb(245, 247, 249);
+}
+
+.login-text {
+	position: relative;
+	z-index: 2;
+	font-weight: 200;
+	font-family: 'Quicksand', sans-serif;
+	color: white;
+	padding: 10px;
 }
 
 .bg-bubbles {
@@ -211,6 +227,11 @@ button:hover {
 
 .logo:nth-child(15){
     left: 60%;
+	animation-delay: 2s;
+}
+
+.logo:nth-child(16){
+    left: 70%;
 	animation-delay: 2s;
 }
 

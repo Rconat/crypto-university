@@ -1,18 +1,22 @@
 const SyllabusData = () => {
     return [{
-        title: 'Bit Coin Quiz',
+        title: 'Module One',
         color: 'pink'
     },{
-        title: 'Basic Crypto Quiz',
+        title: 'Module Two',
         color: 'red'
     },
     {
-        title: 'Intermediate Crypto Quiz',
+        title: 'Module 3',
         color: 'blue'
     },
     {
-        title: 'Expert Crypto Quiz',
+        title: 'Module 4',
         color: 'green'
+    },
+    {
+        title: 'Module 5',
+        color: 'Orange'
     }]
 }
 module.exports = SyllabusData();

@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import FetchQuestions from '../../components/questions'
+// import FetchQuestions from '../../components/questions'
+import FetchQuestions from '../../components/moduleOneQuestions'
+// import FetchQuestions from '../../components/moduleTwoQuestions'
+// import FetchQuestions from '../../components/moduleThreeQuestions'
+// import FetchQuestions from '../../components/moduleFourQuestions'
+// import FetchQuestions from '../../components/moduleFiveQuestions'
+
 // import { useParams } from 'react-router-dom'
 const Quiz = () => {
 	//Fetch Call we will store date
@@ -37,7 +43,7 @@ const Quiz = () => {
 						<div className='question-text'>{questions[question].questionText}</div>
 					</div>
 					<div className='answer-section'>
-						{questions[question].answer.map((specificAnswer) => (
+						{questions[question].answers.map((specificAnswer) => (
 							<button 
 								onClick={() => handleAnswerClick(specificAnswer, questions[question])}
 							>

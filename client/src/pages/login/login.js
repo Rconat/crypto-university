@@ -1,7 +1,32 @@
-import React from 'react'
-import './welcome.css'
+import React, { useRef, useState } from 'react'
+import { Link, useHistory } from 'react-router-dom'
+import { useAuth } from '../../contexts/AuthContext'
+import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
+import './login.css'
 
-const Welcome = () =>  {
+const Login = () => {
+
+    const emailRef = useRef()
+    const passwordRef = useRef()
+    const { login } = useAuth()
+    const [error, setError] = useState('')
+    const [loading, setLoading] = useState(false)
+    const history = useHistory()
+
+    async function handleSubmit(e) {
+        e.preventDefault()
+
+        try {
+            setError('')
+            setLoading(true)
+            await login(emailRef.current.value, passwordRef.current.value)
+            history.push('/')
+        } catch {
+            setError('Failed to sign in')
+        }
+        setLoading(false)
+    }
+
     return (
         <div className="body-container">
             <div className="jumbotron">
@@ -9,13 +34,20 @@ const Welcome = () =>  {
                 <p>Your guide to understanding crypto currency</p>
             </div>
             <div className="container">
-                <h1 className="welcome-title">Welcome</h1>
-
-                <form className="form">
-                    <input type="text" placeholder="Username"></input>
-                    <input type="text" placeholder="Password"></input>
-                    <button type="submit" id="login-button">Login</button>
+                <h1 className="sign-up-text">Log In</h1>
+                <br/>
+                {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
+                <form onSubmit={handleSubmit} className="form">
+                    <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
+                    <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
+                    <button disabled={loading} type="submit" id="log-in-button">Log In</button>
                 </form>
+                <div className="login-text">
+                    <Link to="/forgot-password">Forgot Password?</Link>
+                </div>
+                <div className="login-text">
+                    Need an account? <Link to="/signup">Sign Up</Link>
+                </div>
                 <div className="wrapper">
                     <ul className="bg-bubbles">
                         <li className="logo">
@@ -65,6 +97,9 @@ const Welcome = () =>  {
                         <li className="logo">
                             <img src="https://cryptologos.cc/logos/sushiswap-sushi-logo.svg?v=010" alt="SushiSwap"></img>
                         </li>
+                        <li className="logo">
+                            <img src={FlyingLogo} alt="Crypto University"></img>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -72,4 +107,4 @@ const Welcome = () =>  {
     )
 }
 
-export default Welcome
+export default Login
