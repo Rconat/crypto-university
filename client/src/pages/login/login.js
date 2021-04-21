@@ -33,8 +33,8 @@ const Login = () => {
                 <h1>Crypto University</h1>
                 <p>Your guide to understanding crypto currency</p>
             </div>
-            <div className="container">
-                <h1 className="sign-up-text">Log In</h1>
+            <div className="container main-style">
+                <h1 className="main-text">Log In</h1>
                 <br/>
                 {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
                 <form onSubmit={handleSubmit} className="form">

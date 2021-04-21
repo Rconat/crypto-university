@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import FlyingLogo from '../../assets/logos/cu_coin_144x144.png'
+import FlyingLogo from '../../assets/logos/coin_72x72.svg'
 import './forgotPassword.css'
 
 const ForgotPassword = () => {
@@ -33,8 +33,8 @@ const ForgotPassword = () => {
                 <h1>Crypto University</h1>
                 <p>Your guide to understanding crypto currency</p>
             </div>
-            <div className="container">
-                <h1 className="sign-up-text">Password Reset</h1>
+            <div className="container main-style">
+                <h1 className="main-text">Password Reset</h1>
                 <br/>
                 {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
                 {message && <alert className="alert alert-success" role="alert">{message}</alert>}

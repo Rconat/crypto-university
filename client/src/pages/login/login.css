@@ -10,7 +10,7 @@
     width: 100%;
 }
 
-.container {
+.main-style {
 	max-width: 600px;
 	background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
 	background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
@@ -23,7 +23,7 @@
 	min-width: 100%;
 }
 
-.sign-up-text {
+.main-text {
 	margin-top: 15px;
 	position: relative;
 	z-index: 2;
@@ -228,8 +228,8 @@ button:hover {
 }
 
 .logo:nth-child(16){
-    left: 90%; 
-	animation-delay: 2s;
+    left: 75%; 
+	animation-delay: 4s;
 	animation-duration: 30s;
 }
 
