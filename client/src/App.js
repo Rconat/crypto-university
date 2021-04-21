@@ -19,7 +19,7 @@ import Syllabus from './pages/syllabus/syllabus';
 import Quiz from './pages/quiz/quiz';
 import Prices from './pages/prices/prices';
 import ForgotPassword from './pages/forgotPassword/forgotPassword'
-
+import Account from './pages/Account/account'
 // components
 import Nav from './components/nav/nav'
 
@@ -37,6 +37,7 @@ function App() {
           <PrivateRoute path="/prices" component={Prices} />
           <PrivateRoute path="/syllabus" component={Syllabus} />
           <PrivateRoute path="/investments" component={Investments} />
+          <PrivateRoute path="/account" component={Account} />
           <PrivateRoute exact path='/' component={Dashboard} />
         </Switch>
       </AuthProvider>

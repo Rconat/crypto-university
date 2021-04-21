@@ -1,5 +1,6 @@
 import React from 'react'
 import './account.css'
+
 const Account = () => (
     <div className="container">
 <div className="row gutters">
