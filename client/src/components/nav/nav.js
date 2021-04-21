@@ -46,6 +46,9 @@ const Nav = () => {
                         <li className="nav-item">
                             <Link to="/prices" className="nav-link" href="#">Prices</Link>
                         </li>
+                        <li className="nav-item">
+                            <Link to="/account" className="nav-link" href="#">My Account</Link>
+                        </li>
                     </ul>
                 </div>
                 <div>
