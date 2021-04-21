@@ -222,12 +222,15 @@ button:hover {
 
 .logo:nth-child(15){
     left: 60%;
+	width: 40px;
+	height: 40px;
 	animation-delay: 2s;
 }
 
 .logo:nth-child(16){
-    left: 70%;
+    left: 90%; 
 	animation-delay: 2s;
+	animation-duration: 30s;
 }
 
 @-webkit-keyframes logo {

@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
+import FlyingLogo from '../../assets/logos/cu_coin_144x144.png'
 import './forgotPassword.css'
 
 const ForgotPassword = () => {
@@ -40,7 +40,7 @@ const ForgotPassword = () => {
                 {message && <alert className="alert alert-success" role="alert">{message}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
-                    <button disabled={loading} type="submit" id="log-in-button">Reset Password</button>
+                    <button disabled={loading} type="submit">Reset Password</button>
                 </form>
                 <div className="login-text">
                     <Link to="/login">Login</Link>

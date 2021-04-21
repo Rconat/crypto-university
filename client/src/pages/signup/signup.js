@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import './signup.css'
-import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
+import FlyingLogo from '../../assets/logos/cu_coin_144x144.png'
 
 const Signup = () => {
 
@@ -47,7 +47,7 @@ const Signup = () => {
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
                     <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
                     <input id="password-confirm" type="password" ref={passwordConfirmRef} placeholder="Confirm Password" required></input>
-                    <button disabled={loading} type="submit" id="sign-up-button">Sign Up</button>
+                    <button disabled={loading} type="submit">Sign Up</button>
                 </form>
                 <div className="login-text">
                     Already have an account? <Link to="/login">Log In</Link>

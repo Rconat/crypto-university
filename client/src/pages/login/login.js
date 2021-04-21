@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
+import FlyingLogo from '../../assets/logos/coin_72x72.svg'
 import './login.css'
 
 const Login = () => {
@@ -40,7 +40,7 @@ const Login = () => {
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
                     <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
-                    <button disabled={loading} type="submit" id="log-in-button">Log In</button>
+                    <button disabled={loading} type="submit">Log In</button>
                 </form>
                 <div className="login-text">
                     <Link to="/forgot-password">Forgot Password?</Link>
