@@ -4,6 +4,12 @@ import { useHistory } from 'react-router-dom'
 // importing diploma component
 import Diploma from '../../components/diploma'
 import Api from '../../utils/API';
+// importing Modules
+import ModuleOne from "../../components/moduleOne"
+import ModuleTwo from "../../components/moduleTwo"
+import ModuleThree from "../../components/moduleThree"
+import ModuleFour from "../../components/moduleFour"
+import ModuleFive from "../../components/moduleFive"
 
 const Syllabus = () => {
     const componentRef = useRef()
@@ -49,6 +55,11 @@ const Syllabus = () => {
     }, [])
     return (
         <>
+        <ModuleOne />
+        <ModuleTwo />
+        <ModuleThree />
+        <ModuleFour />
+        <ModuleFive />
         <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
             {syllabi.map((item) => (
                 <div style={{ background: item.color, color: 'white' }} onClick={event => {

@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import './signup.css'
-import FlyingLogo from '../../assets/logos/cu_logo_144x144.png'
+import FlyingLogo from '../../assets/logos/coin_72x72.svg'
 
 const Signup = () => {
 
@@ -39,15 +39,15 @@ const Signup = () => {
                 <h1>Crypto University</h1>
                 <p>Your guide to understanding crypto currency</p>
             </div>
-            <div className="container">
-                <h1 className="sign-up-text">Sign Up</h1>
+            <div className="container main-style">
+                <h1 className="main-text">Sign Up</h1>
                 <br/>
                 {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>
                     <input id="password" type="password" ref={passwordRef} placeholder="Password" required></input>
                     <input id="password-confirm" type="password" ref={passwordConfirmRef} placeholder="Confirm Password" required></input>
-                    <button disabled={loading} type="submit" id="sign-up-button">Sign Up</button>
+                    <button disabled={loading} type="submit">Sign Up</button>
                 </form>
                 <div className="login-text">
                     Already have an account? <Link to="/login">Log In</Link>
