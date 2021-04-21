@@ -69,16 +69,16 @@ const Investments = () => {
             marketCap: item.market_cap,
             supply: item.max_supply,
         }))
-}
-return (
-    <>
-        <div>PRICES</div>
-        <Table
-            columns={columns()}
-            rows={rows()}
-        />
-    </>
-)
+    }
+    return (
+        <>
+            <div>PRICES</div>
+            <Table
+                columns={columns()}
+                rows={rows()}
+            />
+        </>
+    )
 };
 
 
