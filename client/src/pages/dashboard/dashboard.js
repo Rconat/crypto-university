@@ -1,71 +1,60 @@
 import React from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import Ticker from '../../components/ticker/ticker'
+import { Link } from 'react-router-dom'
+import './dashboard.css'
 
 const Dashboard = () => {
 
     const { currentUser } = useAuth()
 
-
-    return(
+    return (
         <>
-            <div>DASHBOARD</div>
-            <br />
             <Ticker />
             <br />
-            <strong>Welcome </strong> {currentUser.email}
-            <br />
-            <div id="progress-container container">
-                <div id="row">
-                    <div>Your Progress</div>
-                </div>
+            <div className="container dashboard-container">
+                <h1 className="heading">DASHBOARD</h1>
                 <br />
-                <div className="row">
-
-                    <div className="col-3">
-                        Module 1
-                    </div>
-                    <div className="col-9">
-                        {/* <i class="far fa-check-square"></i> */}
-                        COMPLETE
-                    </div>
-
-                    <div className="col-3">
-                        Module 2
-                    </div>
-                    <div className="col-9">
-                        {/* <i class="far fa-check-square"></i> */}
-                        INCOMPLETE
-                    </div>
-
-                    <div className="col-3">
-                        Module 3
-                    </div>
-                    <div className="col-9">
-                        INCOMPLETE
-                        {/* <i class="far fa-check-square"></i> */}
-                    </div>
-
-                    <div className="col-3">
-                        Module 4
-                    </div>
-                    <div className="col-9">
-                        INCOMPLETE
-                        {/* <i class="far fa-check-square"></i> */}
-                    </div>
-
-                    <div className="col-3">
-                        Module 5
-                    </div>
-                    <div className="col-9">
-                        COMPLETE
-                        {/* <i class="far fa-check-square"></i> */}
-                    </div>
-
-                </div>
-            </div>
+                <h2 className="welcome-user">Welcome {currentUser.email}
+                </h2>
                 <br />
-                <div className="row">
+                <div className="container progress-container">
+                    <h3 className="your-progress">Your Progress</h3>
+                    <br />
+                    <div className="row dashboard-row">
+                        <div className="col module-col">
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE ONE</button>
+                            </Link>
+                        </div>
+                        <div className="col module-col">
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE TWO</button>
+                            </Link>
+                        </div>
+                        <div className="col module-col">
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE THREE</button>
+                            </Link>
+                        </div>
+                        <div className="col module-col">
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE FOUR</button>
+                            </Link>
+                        </div>
+                        <div className="col module-col">
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE FIVE</button>
+                            </Link>
+                        </div>
+                        <div className="col module-col">
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE SIX</button>
+                            </Link>
+                        </div>
+                    </div>
+                    <br />
+                </div>
             </div>
         </>
     )

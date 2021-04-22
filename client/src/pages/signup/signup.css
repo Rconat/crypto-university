@@ -2,7 +2,7 @@
 	z-index: 2;
 }
 
-.jumbotron {
+/* .jumbotron {
 	text-align: center;
 	margin-top: 15px;
 	font-family: 'Quicksand', sans-serif;
@@ -17,10 +17,10 @@
 
 .main-style {
 	max-width: 600px;
-	background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-	background: -moz-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-	background: -o-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
-	background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+	background: -webkit-linear-gradient(top left, #01c5c4 0%, #b8de6f 100%);
+	background: -moz-linear-gradient(top left, #01c5c4 0%, #b8de6f 100%);
+	background: -o-linear-gradient(top left, #01c5c4 0%, #b8de6f 100%);
+	background: linear-gradient(to bottom right, #01c5c4 0%, #b8de6f 100%);
 	margin: 0;
 	text-align: center;
 	overflow: hidden;
@@ -50,8 +50,8 @@ input {
     display: block;
 	appearance: none;
 	outline: 0;
-	border: 1px solid #53e3a6;
-	background-color: #53e3a6;
+	border: 1px solid #f1e189;
+	background-color: #f1e189;
 	width: 250px;
     border-radius: 3px;
 	padding: 10px 15px;
@@ -87,7 +87,7 @@ button {
 	cursor: pointer;
 	font-size: 18px;
 	transition-duration: 0.25s;
-	color: #53e3a6;
+	color: #01c5c4;
 	opacity: 90%;
 	font-family: 'Quicksand', sans-serif;
 }
@@ -252,4 +252,4 @@ button:hover {
 	100% {
 		transform: translateY(-700px) rotate(600deg);
 	}
-}
+} */

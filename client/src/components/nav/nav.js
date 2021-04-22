@@ -53,7 +53,7 @@ const Nav = () => {
                 </div>
                 <div>
                     <button className="logout-btn btn" variant="link" onClick={handleLogout}>Log Out</button>
-                    {error && <alert className="alert" variant="danger">{error}</alert>}
+                    {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
                 </div>
             </div>
         </nav>

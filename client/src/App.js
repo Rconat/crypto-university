@@ -19,7 +19,7 @@ import Syllabus from './pages/syllabus/syllabus';
 import Quiz from './pages/quiz/quiz';
 import Prices from './pages/prices/prices';
 import ForgotPassword from './pages/forgotPassword/forgotPassword'
-import Account from './pages/Account/account'
+import Account from './pages/account/account'
 // components
 import Nav from './components/nav/nav'
 
