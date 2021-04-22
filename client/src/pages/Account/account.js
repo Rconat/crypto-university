@@ -14,25 +14,25 @@ const Account = () => (
 					</div>
 					<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div className="form-group">
-							<label for="fullName">Full Name</label>
+							<label htmlFor="fullName">Full Name</label>
 							<input type="text" className="form-control" id="fullName" placeholder="Enter full name"/>
 						</div>
 					</div>
 					<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div className="form-group">
-							<label for="eMail">Email</label>
+							<label htmlFor="eMail">Email</label>
 							<input type="email" className="form-control" id="eMail" placeholder="Enter email ID"/>
 						</div>
 					</div>
 					<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div className="form-group">
-							<label for="phone">Phone</label>
+							<label htmlFor="phone">Phone</label>
 							<input type="text" className="form-control" id="phone" placeholder="Enter phone number"/>
 						</div>
 					</div>
 					<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div className="form-group">
-							<label for="website">Website URL</label>
+							<label htmlFor="website">Website URL</label>
 							<input type="url" className="form-control" id="website" placeholder="Website url"/>
 						</div>
 					</div>
@@ -43,25 +43,25 @@ const Account = () => (
 					</div>
 					<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div className="form-group">
-							<label for="Street">Street</label>
+							<label htmlFor="Street">Street</label>
 							<input type="name" className="form-control" id="Street" placeholder="Enter Street"/>
 						</div>
 					</div>
 					<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div className="form-group">
-							<label for="ciTy">City</label>
+							<label htmlFor="ciTy">City</label>
 							<input type="name" className="form-control" id="ciTy" placeholder="Enter City"/>
 						</div>
 					</div>
 					<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div className="form-group">
-							<label for="sTate">State</label>
+							<label htmlFor="sTate">State</label>
 							<input type="text" className="form-control" id="sTate" placeholder="Enter State"/>
 						</div>
 					</div>
 					<div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12">
 						<div className="form-group">
-							<label for="zIp">Zip Code</label>
+							<label htmlFor="zIp">Zip Code</label>
 							<input type="text" className="form-control" id="zIp" placeholder="Zip Code"/>
 						</div>
 					</div>

@@ -55,28 +55,28 @@ const Syllabus = () => {
     }, [])
     return (
         <>
-        <ModuleOne />
-        <ModuleTwo />
-        <ModuleThree />
-        <ModuleFour />
-        <ModuleFive />
-        <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-            {syllabi.map((item) => (
-                <div style={{ background: item.color, color: 'white' }} onClick={event => {
-                    history.push(`/quiz/${item._id}`)
-                }}>
-                    {item.title}
-                </div>
-            ))}
-        </div>
-        
-        <ReactToPrint
-            trigger={() => <button>Print Diploma</button>}
-            content={() => componentRef.current}
-        />
-        <Diploma ref={componentRef}/>
-        
-    </>
+            <ModuleOne />
+            <ModuleTwo />
+            <ModuleThree />
+            <ModuleFour />
+            <ModuleFive />
+            <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                {syllabi.map((item) => (
+                    <div style={{ background: item.color, color: 'white' }} onClick={event => {
+                        history.push(`/quiz/${item._id}`)
+                    }}>
+                        {item.title}
+                    </div>
+                ))}
+            </div>
+
+            <ReactToPrint
+                trigger={() => <button>Print Diploma</button>}
+                content={() => componentRef.current}
+            />
+            <Diploma ref={componentRef} />
+
+        </>
     )
 }
 

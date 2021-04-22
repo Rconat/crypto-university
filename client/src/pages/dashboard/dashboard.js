@@ -1,5 +1,6 @@
 import React from 'react'
 import { useAuth } from '../../contexts/AuthContext'
+import Ticker from '../../components/ticker/ticker'
 
 const Dashboard = () => {
 
@@ -9,6 +10,8 @@ const Dashboard = () => {
     return(
         <>
             <div>DASHBOARD</div>
+            <br />
+            <Ticker />
             <br />
             <strong>Welcome </strong> {currentUser.email}
             <br />
