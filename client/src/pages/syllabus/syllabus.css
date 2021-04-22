@@ -1,0 +1,31 @@
+.graphic {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+p {
+    font-size: 120%;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.img_container {
+    display: flexbox;
+    align-content: center;
+    margin: auto;
+}
+
+.container {
+    display: block;
+    margin: auto;
+    width: 50%
+}
+
+.row {
+    margin-top: 30px;
+}
