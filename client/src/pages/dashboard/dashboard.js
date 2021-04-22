@@ -1,6 +1,7 @@
 import React from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import Ticker from '../../components/ticker/ticker'
+import { Link } from 'react-router-dom'
 import './dashboard.css'
 
 const Dashboard = () => {
@@ -22,22 +23,34 @@ const Dashboard = () => {
                     <br />
                     <div className="row dashboard-row">
                         <div className="col module-col">
-                            <button className="module-btn">MODULE ONE</button>
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE ONE</button>
+                            </Link>
                         </div>
                         <div className="col module-col">
-                            <button className="module-btn">MODULE TWO</button>
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE TWO</button>
+                            </Link>
                         </div>
                         <div className="col module-col">
-                            <button className="module-btn">MODULE THREE</button>
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE THREE</button>
+                            </Link>
                         </div>
                         <div className="col module-col">
-                            <button className="module-btn">MODULE FOUR</button>
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE FOUR</button>
+                            </Link>
                         </div>
                         <div className="col module-col">
-                            <button className="module-btn">MODULE FIVE</button>
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE FIVE</button>
+                            </Link>
                         </div>
                         <div className="col module-col">
-                            <button className="module-btn">MODULE SIX</button>
+                            <Link to="/syllabus">
+                                <button className="module-btn">MODULE SIX</button>
+                            </Link>
                         </div>
                     </div>
                     <br />
