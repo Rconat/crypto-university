@@ -1,14 +1,39 @@
+const User = require("../models/user")
 module.exports = {
-    createUser: function(req, res) {
-
+    createUser: async(req, res) => {
+        try {
+            const user = new User(req.body)
+            const save = await user.save()
+            return res.json(save)
+        } catch(error) {
+            return res.json(error)
+        }
     },
-    getUser: function(req, res) {
-
+    getUserByEmail: async(req, res) => {
+        try {
+            const data = await User.findOne({ email: req.params.email })
+            return res.json(data)
+        } catch(error) {
+            return res.json(error)
+        }
     },
-    updateUser: function(req, res) {
-
+    getUserById: async(req, res) => {
+        try {
+            const data = await User.findById(req.params.id)
+            return res.json(data)
+        } catch(error) {
+            return res.json(error)
+        }
     },
-    deleteUser: function(req, res) {
-
-    }
+    updateUser: async(req, res) => {
+        try {
+            const data = await User.findByIdAndUpdate(req.params.id, {
+                firstName: req.body.firstName,
+                lastName: req.body.lastName,
+            });
+            return res.json(data)
+        } catch(error) {
+            return res.json(error)
+        }
+    },
 }

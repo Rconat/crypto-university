@@ -7,7 +7,7 @@ const QuizSchema = new Schema({
         dafault: Date.now()
     },
     questions: [{
-        answer: { type: Array },
+        answer: { type: [String] },
         questionText: { type: String },
         correctAnswer: { type: String }
     }],

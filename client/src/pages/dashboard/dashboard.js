@@ -8,7 +8,8 @@ const Dashboard = () => {
 
     const { currentUser } = useAuth()
 
-    return (
+    console.log(currentUser)
+    return(
         <>
             <Ticker />
             <br />
