@@ -45,12 +45,33 @@
     animation-timing-function: linear;
     -webkit-animation-name: ticker;
     animation-name: ticker;
-    -webkit-animation-duration: 30s;
-    animation-duration: 30s;
+    -webkit-animation-duration: 60s;
+    animation-duration: 60s;
 }
 .ticker-wrap .ticker__item {
     display: inline-block;
     padding: 0 2rem;
     font-size: 2rem;
     color: white;
+}
+
+.ticker-wrap .ticker__item > div{
+    display: flex;
+}
+
+.tickerChangeGreen {
+    color: green;
+}
+
+.tickerChangeRed {
+    color: red;
+}
+
+.tickerChangeItem {
+    margin: 0 0 0 10px;
+    font-size: 18px;
+    display: inline-flex;
+    flex-direction: column;
+    line-height: normal;
+    align-self: center;
 }
