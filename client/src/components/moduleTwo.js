@@ -1,4 +1,8 @@
 import React from 'react'
+//importing graphics
+import Blockchain_graph from "../assets/blockchain_graphic.svg"
+//importing in styles
+import "../pages/syllabus/syllabus.css"
 
 const ModuleTwo = () => {
     return(
@@ -14,7 +18,9 @@ const ModuleTwo = () => {
             <br />	
             <p>&emsp;The first block in a chain is always referred to as the Genesis Block and is the only block in the chain to not reference the hash of the previous block because there is no previous block to reference. While now mainly used in cryptocurrencies, the blockchain technology can be used for a multitude of other applications across the technology industry as a form of secure storing and distributing of data. Cryptocurrencies often boast that they are immutable meaning that the data stored in the network on the blockchain is so secure that it cannot be changed.</p>
             <br />
-	        <p>** Image of a blockchain **</p>
+	        <div className="img_container">
+                <img className="graphic" src={Blockchain_graph} alt="Blockchain"/>
+            </div>
             <br/>
             <p>&emsp;Blockchains can also use a process known as proof-of-work which are additional calculations that must be performed in order to create a new block on the chain. Just like data hashing if the data is changed in a block, a new proof-of-work must be calculated for that block and each additional block in the chain. While the proof-of-work slows down the generation of new blocks in the chain it is a crucial and necessary step in the process to maintain the security of the blockchain and keep the information from being tampered with. </p>
             <br />
