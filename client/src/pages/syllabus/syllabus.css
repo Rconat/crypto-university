@@ -14,14 +14,23 @@ h1 {
     text-align: center;
 }
 
+h3 {
+    font-size: 140%
+}
+
+h4 {
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+}
+
 .img_container {
-    display: flexbox;
+    display: flex;
     align-content: center;
     margin: auto;
 }
 
 .container {
-    display: block;
     margin: auto;
     width: 50%
 }

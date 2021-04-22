@@ -55,6 +55,17 @@ const Syllabus = () => {
     }, [])
     return (
         <>
+        <br />
+        <div className="overview container">
+            <h1>Syllabus overview</h1>
+            <hr />
+            <h3>Module 1 - Centralization vs Decentralization</h3>
+            <h3>Module 2 - What is Blockchain?</h3>
+            <h3>Module 3 - What is Cryptocurrency?</h3>
+            <h3>Module 4 - Cryptocurrency Wallets</h3>
+            <h3>Module 5 - Purchasing and maintaining Cryptocurrencies safely</h3>
+        </div>
+        <br />
         <ModuleOne />
         <ModuleTwo />
         <ModuleThree />
