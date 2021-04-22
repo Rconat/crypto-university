@@ -15,7 +15,12 @@ h1 {
 }
 
 h3 {
-    font-size: 140%
+    font-size: 140%;
+    text-align: center;
+}
+
+.module {
+    text-align: left;
 }
 
 h4 {

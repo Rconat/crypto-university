@@ -1,4 +1,6 @@
 import React from 'react'
+//importing in styles
+import "../pages/syllabus/syllabus.css"
 
 const ModuleThree = () => {
     return(

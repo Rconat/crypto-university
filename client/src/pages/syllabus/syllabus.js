@@ -59,11 +59,46 @@ const Syllabus = () => {
         <div className="overview container">
             <h1>Syllabus overview</h1>
             <hr />
-            <h3>Module 1 - Centralization vs Decentralization</h3>
-            <h3>Module 2 - What is Blockchain?</h3>
-            <h3>Module 3 - What is Cryptocurrency?</h3>
-            <h3>Module 4 - Cryptocurrency Wallets</h3>
-            <h3>Module 5 - Purchasing and maintaining Cryptocurrencies safely</h3>
+            <div className="row">
+                <div className="col-4"> 
+                    <h3>Module 1</h3> 
+                </div>
+                <div className="col-8"> 
+                    <h3 className="module">Centralization vs Decentralization</h3> 
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-4"> 
+                    <h3>Module 2</h3> 
+                </div>
+                <div className="col-8"> 
+                    <h3 className="module">What is Blockchain?</h3> 
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-4"> 
+                    <h3>Module 3</h3> 
+                </div>
+                <div className="col-8"> 
+                    <h3 className="module">What is Cryptocurrency?</h3> 
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-4"> 
+                    <h3>Module 4</h3> 
+                </div>
+                <div className="col-8"> 
+                    <h3 className="module">Cryptocurrency Wallets</h3> 
+                </div>
+            </div>
+            <div className="row">
+                <div className="col-4"> 
+                    <h3>Module 5</h3> 
+                </div>
+                <div className="col-8"> 
+                    <h3 className="module">Purchasing and maintaining Cryptocurrencies safely</h3> 
+                </div>
+            </div>
         </div>
         <br />
         <ModuleOne />
