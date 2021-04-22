@@ -63,8 +63,8 @@ const Syllabus = () => {
                 //         }
                 //     ]
                 // }
-                console.log(response.data.syllabus)
-                setSyllabi(response.data.syllabus)
+                console.log(response.data)
+                setSyllabi(response.data)
             }
         })
         return () => {
