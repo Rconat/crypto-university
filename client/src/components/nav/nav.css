@@ -2,6 +2,11 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+.CULogo {
+    width: 75px;
+    height: 75px;
+}
+
 /* Grow */
 .hvr-grow {
     display: inline-block;
@@ -32,18 +37,18 @@
 }
 
 .nav-item:hover {
-    background-color: #53e3a6;
+    background-color: #f1e189;
 }
 
 .logout-btn {
     color: black;
-    background-color: #53e3a6;
+    background-color: #b8de6f;
     font-family: 'Quicksand', sans-serif;
     width: 100px;
     
 }
 
 .logout-btn:hover {
-    background-color: #50a3a2;
+    background-color: #01c5c4;
 }
 

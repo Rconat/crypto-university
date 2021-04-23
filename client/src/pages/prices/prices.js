@@ -1,6 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import API from './../../utils/API.js';
 import Table from './../../components/table'
+// import Ticker from '../../components/ticker/ticker'
+
 const Investments = () => {
     const id = useRef(0);
     const currentId = useRef(0);
@@ -69,16 +71,17 @@ const Investments = () => {
             marketCap: item.market_cap,
             supply: item.max_supply,
         }))
-}
-return (
-    <>
-        <div>PRICES</div>
-        <Table
-            columns={columns()}
-            rows={rows()}
-        />
-    </>
-)
+    }
+    return (
+        <>
+        {/* <Ticker /> */}
+            <div>PRICES</div>
+            <Table
+                columns={columns()}
+                rows={rows()}
+            />
+        </>
+    )
 };
 
 

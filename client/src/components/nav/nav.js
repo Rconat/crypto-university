@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
-import CULogo from '../../assets/logos/cu_logo_72x72.png'
+import CULogo from '../../assets/logos/cu_logo.svg'
 import './nav.css'
 
 const Nav = () => {
@@ -27,7 +27,7 @@ const Nav = () => {
             <div className="container-fluid">
                 <Link to="/about" className="navbar-brand
                 cu-about hvr-grow" href="#">
-                    <img src={CULogo} alt="Crypto University"></img>
+                    <img className="CULogo" src={CULogo} alt="Crypto University"></img>
                 </Link>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -53,7 +53,7 @@ const Nav = () => {
                 </div>
                 <div>
                     <button className="logout-btn btn" variant="link" onClick={handleLogout}>Log Out</button>
-                    {error && <alert className="alert" variant="danger">{error}</alert>}
+                    {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
                 </div>
             </div>
         </nav>

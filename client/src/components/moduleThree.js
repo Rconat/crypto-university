@@ -6,7 +6,7 @@ const ModuleThree = ({ switchCurrentModule }) => {
     return(
     <div className = 'container'>
         <div className="row">
-            <h1>Module 3 - What is Cryptocurrency?</h1>
+            <h1 id="module-3">Module 3 - What is Cryptocurrency?</h1>
             <hr/>
             <p>&emsp;When first being introduced to the topic of cryptocurrencies it is important to understand the concepts of blockchain as well as the peer-to-peer (P2P) network as that is truly at the core of what a cryptocurrency is and how it functions. However, to put all these concepts together and combine them with the idea of how we use currency in our societies today as well as how cryptocurrencies function in practical usage; a cryptocurrency is a fully digital currency that can be used to buy goods and services. Cryptocurrencies are fully digital because there is no physical representation of the currency and it only resides in the network of users who keep track of the running ledger through the blockchain.</p>
             <br/> 
