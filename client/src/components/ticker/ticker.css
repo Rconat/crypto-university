@@ -28,7 +28,11 @@
     width: 100%;
     overflow: hidden;
     height: 4rem;
-    background-color: rgba(0, 0, 0, 0.9);
+    /* background-color: #01c5c4; */
+    background: -webkit-linear-gradient(top left,  #b8de6f 0%, #01c5c4 100%);
+	background: -moz-linear-gradient(top left,  #b8de6f 0%, #01c5c4 100%);
+	background: -o-linear-gradient(top left,  #b8de6f 0%, #01c5c4 100%);
+	background: linear-gradient(to bottom right,  #b8de6f 0%, #01c5c4 100%);
     padding-left: 100%;
     box-sizing: content-box;
 }

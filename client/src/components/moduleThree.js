@@ -1,6 +1,8 @@
 import React from 'react'
+//importing in styles
+import "../pages/syllabus/syllabus.css"
 
-const ModuleThree = () => {
+const ModuleThree = ({ switchCurrentModule }) => {
     return(
     <div className = 'container'>
         <div className="row">
@@ -19,7 +21,10 @@ const ModuleThree = () => {
             <p>&emsp;When first created in 2009 there wasn’t much use for cryptocurrencies. Because of this individuals who wanted to remain anonymous would primarily use Bitcoin on a dark web site known as the Silk Road to buy illegal products and services. It was believed at the time that using cryptocurrencies meant that the funds could never be tracked to any individual. This is however not exactly the case as anyone who knows a users’ address can see what that user has spent/received and what address has sent/received funds between them. Because of this cryptocurrencies are considered to be semi-anonymous. In the long run if a user wishes to transfer funds to a bank account or to another source that data can always be tracked and since the blockchain is immutable that data will always exist on previous blocks to be seen and accessed by anyone. Since the early days usage has become mainstream and it is much more rare to be used for illicit activity as applications such as Coinbase require users to tie their wallets to their identity. </p>
             <br />
             <p>&emsp;Cryptocurrencies have come a long way since their first conception and implementation and now are being used to store data on blockchains that include things other than just financial transactions. A popular cryptocurrency known as Ethereum uses their P2P network as a way for companies to create decentralized applications which can have any number of uses. These applications would benefit from all the same securities and protections provided by using the blockchain as well as the decentralized network and become a huge selling point to create new and exciting ideas which will ultimately make use of the Ethereum technology.  More recently the Ethereum network has been used to buy and sell NTFs (non-fungible-tokens) which gives the ability to distribute and own digital media such as pictures, videos, and even tweets. There is not much legal precedent in place for NFTs currently but the technology is pushing the limits of how we think about ownership and how we distribute digital goods.</p>
+            <br />
+            <button onClick = {e => switchCurrentModule(e, "module2")}>Previous Module</button>
             <button>Module 3 Test</button>
+            <button onClick = {e => switchCurrentModule(e, "module4")}>Next Module</button>
         </div>
     </div>
     )

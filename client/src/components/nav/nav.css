@@ -2,6 +2,11 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+.CULogo {
+    width: 75px;
+    height: 75px;
+}
+
 /* Grow */
 .hvr-grow {
     display: inline-block;
