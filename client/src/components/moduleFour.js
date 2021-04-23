@@ -5,7 +5,7 @@ import Trans_graph from "../assets/transaction_graphic.svg"
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
-const ModuleFour = () => {
+const ModuleFour = ({ switchCurrentModule }) => {
     return (
         <div className='container'>
             <div className="row">
@@ -35,9 +35,9 @@ const ModuleFour = () => {
                 <br />
                 <p>&emsp;If security is the top priority when selecting a type of wallet then choosing a “Cold” wallet may be the best option. “Cold” wallets can come in the form of Hardware wallets which are usually a USB drive (or any physical harddrive) that stores all the associated keys and wallet addresses as well as Paper wallets which store that same data physically using a pen and paper. Paper wallets are considered out of date as well as unreliable since anyone who sees that data can copy it down and use it to get access to the wallet. Hardware wallets can have additional security in the form of password protection to access the information stored on the device. These wallets sacrifice ease of use in order to maintain these protections and oftentimes it can become quite difficult to access funds stored on “Cold” wallets. Because of this these wallets are better suited for investors or users who wish to hold on to their cryptocurrencies for a long period of time. Popular Hardware wallets include those by Trezor as well as Ledger.</p>
                 <br />
-                <button>Previous Module</button>
+                <button onClick = {e => switchCurrentModule(e, "module3")}>Previous Module</button>
                 <button>Module 4 quiz</button>
-                <button>Next Module</button>
+                <button onClick = {e => switchCurrentModule(e, "module5")}>Next Module</button>
             </div>
         </div>
     )
