@@ -7,7 +7,7 @@ import "../pages/syllabus/syllabus.css"
 
 const ModuleOne = ({ switchCurrentModule }) => {
     return(
-    <div className = 'container'>
+    <div className = 'container_syllabus'>
         <div className="row">
             <h1>Module 1 - Centralization vs Decentralization</h1>
             <hr />

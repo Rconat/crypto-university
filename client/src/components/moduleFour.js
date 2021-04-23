@@ -7,7 +7,7 @@ import "../pages/syllabus/syllabus.css"
 
 const ModuleFour = ({ switchCurrentModule }) => {
     return (
-        <div className='container'>
+        <div className='container_syllabus'>
             <div className="row">
                 <h1>Module 4 - Cryptocurrency Wallets</h1>
                 <hr />

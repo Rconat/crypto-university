@@ -6,7 +6,7 @@ import "../pages/syllabus/syllabus.css"
 
 const ModuleTwo = ({ switchCurrentModule }) => {
     return(
-    <div className = 'container'>
+    <div className = 'container_syllabus'>
         <div className="row">
             <h1>Module 2 - What is Blockchain?</h1>
             <hr />
