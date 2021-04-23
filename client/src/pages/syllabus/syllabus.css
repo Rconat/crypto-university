@@ -1,0 +1,53 @@
+.graphic {
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+p {
+    font-size: 120%;
+    margin-bottom: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    font-size: 140%;
+    text-align: center;
+}
+
+.module {
+    text-align: left;
+}
+
+h4 {
+    font-size: 120%;
+    font-weight: bold;
+    text-align: center;
+}
+
+.img_container {
+    display: flex;
+    align-content: center;
+    margin: auto;
+}
+
+.container {
+    margin: auto;
+    width: 50%
+}
+
+.row {
+    margin-top: 30px;
+}
+
+.hide {
+    display: none;
+}
+
+body {
+    overflow-x:hidden;
+}
