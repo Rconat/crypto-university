@@ -29,7 +29,7 @@ function App() {
       <AuthProvider>
         <Nav />
         <Switch>
-          <Route path="/signup" component={Signup} />
+          <Route path="/signup"nent={Signup} />
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
           <PrivateRoute path="/quiz/:id" component={Quiz} />
@@ -37,7 +37,7 @@ function App() {
           <PrivateRoute path="/prices" component={Prices} />
           <PrivateRoute path="/syllabus" component={Syllabus} />
           <PrivateRoute path="/investments" component={Investments} />
-          <PrivateRoute path="/account" component={Account} />
+          <PrivateRoute path="/account" component={Account} /> compo
           <PrivateRoute exact path='/' component={Dashboard} />
         </Switch>
       </AuthProvider>

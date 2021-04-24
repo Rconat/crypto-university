@@ -66,7 +66,8 @@ const Investments = () => {
         return prices.map((item) => ({
             name: item.name,
             price: item.price,
-            change: item['1d']?.price_change,
+            change: item['1d']?.price_change ? item['1d']?.price_change : 'No data found',
+            // change: item['1d'].price_change ? item['1d'].price_change : 'No data found', possibly research other optional chainging options that may do the same thing
             volume: item['1d']?.volume,
             marketCap: item.market_cap,
             supply: item.max_supply,

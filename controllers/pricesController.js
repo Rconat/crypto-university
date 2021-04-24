@@ -8,7 +8,7 @@ module.exports = {
                 ids: "BTC,ETH,XRP,CYFM,BNB,DOGE,TRX,BCH,LTC,ETC,BTCB,DASH,ZEC,COMP,NEO",
                 interval: "1d,30d",
                 convert: "USD",
-                perPage: 100,
+                perPage: 10,
                 page: 1,
             }
             const results = await axios.get('https://api.nomics.com/v1/currencies/ticker', { params })
