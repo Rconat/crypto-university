@@ -6,13 +6,19 @@ const SyllabusSchema = new Schema({
         type: Date,
         dafault: Date.now()
     },
-    syllabus: [{
-        color: { type: String },
-        title: { type: String },
-        id: { type: String }
-    }]
+    color: { type: String },
+    title: { type: String },
+    questions: [
+        {
+            answers: { type: Array },
+            questionText: { type: String },
+            correctAnswer: { type: String }
+        }
+    ],
 }, { versionKey: false })
 
 const Syllabus = mongoose.model('Syllabus', SyllabusSchema)
 
 module.exports = Syllabus;
+
+// might have to tweak this model 

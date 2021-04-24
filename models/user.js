@@ -2,20 +2,24 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({
-    username: {
+    firstName: {
+        type: String,
+    },
+    lastName: {
+        type: String,
+    },
+    email: {
         type: String,
         required: "A username is required"
     },
-    mockPortfolio : [
+    modules: [
         {
-            type: Schema.Types.ObjectId,
-            ref: 'mockPortfolio'
-        }
-    ],
-    portfolio : [
-        {
-            type: Schema.Types.ObjectId,
-            ref: 'portfolio'
+            score: { type: Number, default: 0 },
+            completed: { type: Boolean, default: false },
+            syllabus: {
+                type: Schema.Types.ObjectId,
+                ref: 'Syllabus'
+            },
         }
     ],
     educated: {
@@ -27,3 +31,17 @@ const userSchema = new Schema({
 const User = mongoose.model('User', userSchema)
 
 module.exports = User
+
+
+// mockPortfolio : [
+//     {
+//         type: Schema.Types.ObjectId,
+//         ref: 'mockPortfolio'
+//     }
+// ],
+// portfolio : [
+//     {
+//         type: Schema.Types.ObjectId,
+//         ref: 'portfolio'
+//     }
+// ],

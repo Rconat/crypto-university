@@ -24,7 +24,7 @@ const Signup = () => {
         try {
             setError('')
             setLoading(true)
-            await signup(emailRef.current.value, passwordRef.current.value)
+            await signup(emailRef.current.value, passwordRef.current.value);
             history.push('/dashboard')
         } catch (error) {
             console.log(error.message)
@@ -41,7 +41,7 @@ const Signup = () => {
             </div>
             <div className="container main-style">
                 <h1 className="main-text">Sign Up</h1>
-                <br/>
+                <br />
                 {error && <alert className="alert alert-danger" role="alert">{error}</alert>}
                 <form onSubmit={handleSubmit} className="form">
                     <input id="email" type="email" ref={emailRef} placeholder="Email" required></input>

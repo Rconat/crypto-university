@@ -1,22 +1,32 @@
+const moduleOneQuestions = require('./moduleOneQuestions.js');
+const moduleTwoQuestions = require('./moduleTwoQuestions.js');
+const moduleThreeQuestions = require('./moduleThreeQuestions.js');
+const moduleFourQuestions = require('./moduleFourQuestions.js');
+const moduleFiveQuestions = require('./moduleFiveQuestions.js');
 const SyllabusData = () => {
     return [{
-        title: 'Module One',
-        color: 'pink'
+        title: 'ModuleOne',
+        color: 'pink', 
+        questions: moduleOneQuestions()
     },{
-        title: 'Module Two',
-        color: 'red'
+        title: 'ModuleTwo',
+        color: 'red', 
+        questions: moduleTwoQuestions()
     },
     {
-        title: 'Module 3',
-        color: 'blue'
+        title: 'ModuleThree',
+        color: 'blue', 
+        questions: moduleThreeQuestions()
     },
     {
-        title: 'Module 4',
-        color: 'green'
+        title: 'ModuleFour',
+        color: 'green', 
+        questions: moduleFourQuestions()
     },
     {
-        title: 'Module 5',
-        color: 'Orange'
+        title: 'ModuleFive',
+        color: 'orange', 
+        questions: moduleFiveQuestions()
     }]
 }
 module.exports = SyllabusData();
