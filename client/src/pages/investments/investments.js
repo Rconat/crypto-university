@@ -1,7 +1,8 @@
 import React from 'react'
+import Checksum from '../../components/checksum/checksum'
 
 const Investments = () => (
-    <div>INVESTMENTS</div>
+    <Checksum />
 )
 
 export default Investments

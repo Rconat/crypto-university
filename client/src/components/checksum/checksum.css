@@ -1,0 +1,51 @@
+#randomNums {
+    width: 100px;
+    height: 100px;
+    background-color: #01c5c4;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+#randomNumsText {
+    line-height: 94px;
+}
+
+#divisor {
+    width: 100px;
+    height: 100px;
+    background-color: #f1e189;
+    border: 2px solid black;
+    margin: 5px;
+    margin-left: 25px;
+}
+
+#divisorText {
+    line-height: 94px;
+}
+
+#row {
+    display: flex;
+}
+
+#textField {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 5px;
+    margin-top: 30px;
+}
+
+form {
+    padding: 0;
+}
+
+#userEntry {
+    resize: none;
+    font-size: 260%;
+    max-width: 96px;
+    max-height: 96px;
+    text-align: center;
+    padding: none;
+    border-style: none;
+    line-height: 90px;
+}
