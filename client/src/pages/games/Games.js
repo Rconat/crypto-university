@@ -1,8 +1,8 @@
 import React from 'react'
 import Checksum from '../../components/checksum/checksum'
 
-const Investments = () => (
+const Games = () => (
     <Checksum />
 )
 
-export default Investments
+export default Games

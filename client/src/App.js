@@ -14,7 +14,7 @@ import Login from './pages/login/login'
 import Signup from './pages/signup/signup';
 import About from './pages/about/about';
 import Dashboard from './pages/dashboard/dashboard';
-import Investments from './pages/investments/investments';
+import Games from './pages/games/Games';
 import Syllabus from './pages/syllabus/syllabus';
 import Quiz from './pages/quiz/quiz';
 import Prices from './pages/prices/prices';
@@ -36,7 +36,7 @@ function App() {
           <PrivateRoute path="/about" component={About} />
           <PrivateRoute path="/prices" component={Prices} />
           <PrivateRoute path="/syllabus" component={Syllabus} />
-          <PrivateRoute path="/investments" component={Investments} />
+          <PrivateRoute path="/Games" component={Games} />
           <PrivateRoute path="/account" component={Account} />
           <PrivateRoute exact path='/' component={Dashboard} />
         </Switch>

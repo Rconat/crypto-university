@@ -1,30 +1,45 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import "./checksum.css"
 
 function Checksum() {
 
-    var randomNums = []
-    var divisor;
-    var remainder;
-    var userScore;
+    const [userNum, setUserNum] = useState(1)
+    const [randomNums, setRandomNums] = useState([])
+    const [divisor, setDivisor] = useState(1)
+    const [remainder, setRemainder] = useState(1)
 
-    while(randomNums.length < 8){
-        var r = Math.floor(Math.random() * 20) + 1
-        if (randomNums.indexOf(r) === -1 ) randomNums.push(r)
+    const generateRandomNums = () => {
+
+        let localDivisor;
+        let localRandomNums = []
+
+        while(localRandomNums.length < 8){
+            var r = Math.floor(Math.random() * 20) + 1
+            if (localRandomNums.indexOf(r) === -1 ) localRandomNums.push(r)
+        }
+
+        setRandomNums(localRandomNums)
+    
+        localDivisor = (Math.floor(Math.random() * 10) + 3)
+
+        setDivisor(localDivisor)
+    
+        let sum = localRandomNums.reduce(function(a,b){
+        return a + b
+        }, 0);
+    
+        setRemainder(sum % localDivisor)
+    
+        console.log("sum of numbers", sum)
     }
-
-    divisor = Math.floor(Math.random() * 10) + 1
-
-    var sum = randomNums.reduce(function(a,b){
-    return a + b
-    }, 0);
-
-    remainder = (sum % divisor)
 
     console.log("random numbers", randomNums);
     console.log("divisor", divisor)
-    console.log("sum of numbers", sum)
     console.log("remainder", remainder)
+    
+    useEffect(() => {
+        generateRandomNums()
+    }, [])
 
     return <div id="checksumGame">
         
