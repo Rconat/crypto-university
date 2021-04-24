@@ -12,17 +12,15 @@ const userSchema = new Schema({
         type: String,
         required: "A username is required"
     },
-    modules: [{
-        completed: { type: Number, default: 0},
-        syllabus: {
-            type: Schema.Types.ObjectId,
-            ref: 'Syllabus'
-        },
-        quiz: {
-            type: Schema.Types.ObjectId,
-            ref: 'Quiz'
+    modules: [
+        {
+            completed: { type: Number, default: 0 },
+            syllabus: {
+                type: Schema.Types.ObjectId,
+                ref: 'Syllabus'
+            },
         }
-    }],
+    ],
     educated: {
         type: Boolean,
         default: false

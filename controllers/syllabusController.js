@@ -8,4 +8,12 @@ module.exports = {
             return res.json(e)
         }
     },
+    getQuizById: async (req, res) => {
+        try {
+            const data = await Syllabus.findById(req.params.id)
+            return res.json(data);
+        } catch (e) {
+            return res.json(e)
+        }
+    },
 }

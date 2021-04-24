@@ -8,6 +8,13 @@ const SyllabusSchema = new Schema({
     },
     color: { type: String },
     title: { type: String },
+    questions: [
+        {
+            answers: { type: Array },
+            questionText: { type: String },
+            correctAnswer: { type: String }
+        }
+    ],
 }, { versionKey: false })
 
 const Syllabus = mongoose.model('Syllabus', SyllabusSchema)

@@ -2,7 +2,7 @@ import React from 'react'
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
-const ModuleFive = ({ switchCurrentModule }) => {
+const ModuleFive = ({ switchCurrentModule, prev, next }) => {
     return(
         <div className = 'container'>
             <div className="row">
@@ -23,9 +23,9 @@ const ModuleFive = ({ switchCurrentModule }) => {
                 <br />
                 <p>&emsp;Storing cryptocurrency on a physical Hard Drive is a great way to maintain a “Cold” wallet but even this method is not foolproof to keeping your currency safe. James Howells, a 35-year-old IT engineer from Wales said he accidentally threw away a harddrive containing the private key needed to access his currency. Howells claims to have had 7,500 bitcoins in the wallet that the private key gave access to. As of April 2021 the value of those bitcoins would amount to over $384 million US. In Howells’ case he was to blame for recklessly discarding his Hard Drive however Hard Drives have the potential to become corrupted since they do wear out over time. Backing up this data in multiple places can certainly save a lot of stress and headaches.</p>
                 <br />
-                <button onClick = {e => switchCurrentModule(e, "module4")}>Previous Module</button>
+                <button onClick={prev}>Syllabus</button>
                 <button>Module 5 quiz</button>
-                <button onClick = {e => switchCurrentModule(e, "syllabus")}>Syllabus</button>
+                <button onClick={next}>Next Module</button>
             </div>
         </div>
     )

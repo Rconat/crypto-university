@@ -13,14 +13,21 @@ import ModuleFour from "../../components/moduleFour"
 import ModuleFive from "../../components/moduleFive"
 //importing in styles
 import "./syllabus.css"
-
 const Syllabus = () => {
+    const CurrentComponent = {
+        "syllabus": () => <Overview switchCurrentModule={switchCurrentModule} />,
+        "ModuleOne": () => <ModuleOne switchCurrentModule={switchCurrentModule} prev={(e) => switchCurrentModule(e, 'syllabus')} next={(e) => switchCurrentModule(e, 'ModuleTwo')}/>,
+        "ModuleTwo": () => <ModuleTwo switchCurrentModule={switchCurrentModule} prev={(e) => switchCurrentModule(e, 'ModuleOne')} next={(e) => switchCurrentModule(e, 'ModuleThree')}/>,
+        "ModuleThree": () => <ModuleThree switchCurrentModule={switchCurrentModule} prev={(e) => switchCurrentModule(e, 'ModuleTwo')} next={(e) => switchCurrentModule(e, 'ModuleFour')}/>,
+        "ModuleFour": () => <ModuleFour switchCurrentModule={switchCurrentModule} prev={(e) => switchCurrentModule(e, 'ModuleThree')} next={(e) => switchCurrentModule(e, 'ModuleFive')}/>,
+        "ModuleFive": () => <ModuleFive switchCurrentModule={switchCurrentModule} prev={(e) => switchCurrentModule(e, 'ModuleFour')} next={(e) => switchCurrentModule(e, 'syllabus')}/>,
+    }
 
     // react-to-print
     const componentRef = useRef()
     const handlePrint = useReactToPrint({
         content: () => componentRef.current,
-      });
+    });
 
     const [diplomaVisable, setDiplomaVisable] = useState(false)
 
@@ -30,40 +37,13 @@ const Syllabus = () => {
 
     const switchCurrentModule = (e, targetModule) => {
         setCurrentModule(targetModule)
-        window.scrollTo(0,100)
+        window.scrollTo(0, 100)
     }
 
     useEffect(() => {
         let mounted = true;
         Api.syllabus().then(response => {
             if (mounted) {
-                // Response
-                // {
-                //     "_id": "607a8dfcef66ae5a002f630b",
-                //     "syllabus": [
-                //         {
-                //             "_id": "607a8dfcef66ae5a002f630c",
-                //             "title": "Bit Coin Quiz",
-                //             "color": "pink"
-                //         },
-                //         {
-                //             "_id": "607a8dfcef66ae5a002f630d",
-                //             "title": "Basic Crypto Quiz",
-                //             "color": "red"
-                //         },
-                //         {
-                //             "_id": "607a8dfcef66ae5a002f630e",
-                //             "title": "Intermediate Crypto Quiz",
-                //             "color": "blue"
-                //         },
-                //         {
-                //             "_id": "607a8dfcef66ae5a002f630f",
-                //             "title": "Expert Crypto Quiz",
-                //             "color": "green"
-                //         }
-                //     ]
-                // }
-                console.log(response.data)
                 setSyllabi(response.data)
             }
         })
@@ -73,39 +53,25 @@ const Syllabus = () => {
     }, [])
     return (
         <>
-        <br />
-        <div id="top">
-            { currentModule === "syllabus" && <Overview switchCurrentModule={ switchCurrentModule }/> }
-            { currentModule === "module1" && <ModuleOne switchCurrentModule={ switchCurrentModule }/> }
-            { currentModule === "module2" && <ModuleTwo switchCurrentModule={ switchCurrentModule }/> }
-            { currentModule === "module3" && <ModuleThree switchCurrentModule={ switchCurrentModule }/> }
-            { currentModule === "module4" && <ModuleFour switchCurrentModule={ switchCurrentModule }/> }
-            { currentModule === "module5" && <ModuleFive switchCurrentModule={ switchCurrentModule }/> }
-        </div>
-        <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-            {syllabi.map((item) => (
-                <div style={{ background: item.color, color: 'white' }} onClick={event => {
-                    history.push(`/quiz/${item._id}`)
-                }}>
-                    {item.title}
-                </div>
-            ))}
-        </div>
-        
-        <div style={ {position:"absolute", left:-2000} }>
-            <Diploma ref={componentRef}/>
-        </div>
-        <button onClick={() => {
+            <br />
+            <div id="top" style={{ display: 'flex', justifyContent: 'flex-start' }}>
+                {CurrentComponent[currentModule]()}
+            </div>
+
+            <div style={{ position: "absolute", left: -2000 }}>
+                <Diploma ref={componentRef} />
+            </div>
+            <button onClick={() => {
                 setDiplomaVisable(true)
-                setTimeout(() =>{
+                setTimeout(() => {
                     handlePrint()
                     setDiplomaVisable(false)
                 }, 500)
             }
             }>Print this out!</button>
-        
-        
-    </>
+
+
+        </>
 
     )
 }

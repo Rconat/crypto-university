@@ -5,7 +5,7 @@ import Trans_graph from "../assets/transaction_graphic.svg"
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
-const ModuleFour = ({ switchCurrentModule }) => {
+const ModuleFour = ({ switchCurrentModule, prev, next }) => {
     return (
         <div className='container'>
             <div className="row">
@@ -16,7 +16,7 @@ const ModuleFour = ({ switchCurrentModule }) => {
                 <p>&emsp;Cryptocurrency wallets contain the tools that users need to access the blockchain and send the data which can be used to send and receive digital currencies. There is no physical storing of currency in these wallets but rather the wallets contain the data which represents the currency as well as the keys to the wallet needed to interact with the blockchain. In a typical cryptocurrency transaction a user will need 2 keys (both one of the the Private keys as well as one of the Public keys) associated with their crypto wallet.</p>
                 <br />
                 <div className="img_container">
-	                <img className="graphic img-fluid" src={Trans_graph} alt="Transaction"/>
+                    <img className="graphic img-fluid" src={Trans_graph} alt="Transaction" />
                 </div>
                 <h4>Typical transaction on a blockchain</h4>
                 <br />
@@ -28,16 +28,16 @@ const ModuleFour = ({ switchCurrentModule }) => {
                 <p>&emsp;Oftentimes wallets can be considered as being “Hot” or “Cold”. A “Hot” wallet is any wallet that is connected to the internet. These wallets are easy to set up and the funds are very easily accessible when needing to transfer currencies on the blockchain. A “Hot” wallet can be any wallet that is generated and stored using either a web application, a desktop application or a mobile application. However since “Hot” wallets are connected to the internet there is always the chance of a hacker getting access to the funds stored on these wallets. It is imperative that you research the companies that offer these types of wallets to make sure they are reputable and can allow you to safely and securely access your funds using appropriate data encryption methods. Popular applications for users to create wallets include Coinbase, Robinhood, and SoFi.</p>
                 <br />
                 <div className="img_container">
-	                <img className="graphic img-fluid" src={Wallet_graph} alt="Types of Wallets"/>
+                    <img className="graphic img-fluid" src={Wallet_graph} alt="Types of Wallets" />
                 </div>
                 <h4>Types of Crypto Wallets</h4>
                 <br />
                 <br />
                 <p>&emsp;If security is the top priority when selecting a type of wallet then choosing a “Cold” wallet may be the best option. “Cold” wallets can come in the form of Hardware wallets which are usually a USB drive (or any physical harddrive) that stores all the associated keys and wallet addresses as well as Paper wallets which store that same data physically using a pen and paper. Paper wallets are considered out of date as well as unreliable since anyone who sees that data can copy it down and use it to get access to the wallet. Hardware wallets can have additional security in the form of password protection to access the information stored on the device. These wallets sacrifice ease of use in order to maintain these protections and oftentimes it can become quite difficult to access funds stored on “Cold” wallets. Because of this these wallets are better suited for investors or users who wish to hold on to their cryptocurrencies for a long period of time. Popular Hardware wallets include those by Trezor as well as Ledger.</p>
                 <br />
-                <button onClick = {e => switchCurrentModule(e, "module3")}>Previous Module</button>
+                <button onClick={prev}>Syllabus</button>
                 <button>Module 4 quiz</button>
-                <button onClick = {e => switchCurrentModule(e, "module5")}>Next Module</button>
+                <button onClick={next}>Next Module</button>
             </div>
         </div>
     )
