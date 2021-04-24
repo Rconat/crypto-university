@@ -29,7 +29,7 @@ function App() {
       <AuthProvider>
         <Nav />
         <Switch>
-          <Route path="/signup"nent={Signup} />
+          <Route path="/signup"component={Signup} />
           <Route path="/login" component={Login} />
           <Route path="/forgot-password" component={ForgotPassword} />
           <PrivateRoute path="/quiz/:id" component={Quiz} />

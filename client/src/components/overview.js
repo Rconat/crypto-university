@@ -8,7 +8,7 @@ const Overview = ({ switchCurrentModule }) => {
         <div className="overview container">
             <h1>Syllabus overview</h1>
             <hr />
-            <div className="row" onClick={e => switchCurrentModule(e, "module1")}>
+            <div className="row" onClick={e => switchCurrentModule(e, "ModuleOne")}>
                 <div className="col-4">
                     <h3><button>Module 1</button></h3>
 
@@ -17,7 +17,7 @@ const Overview = ({ switchCurrentModule }) => {
                     <h3 className="module">Centralization vs Decentralization</h3>
                 </div>
             </div>
-            <div className="row" onClick={e => switchCurrentModule(e, "module2")}>
+            <div className="row" onClick={e => switchCurrentModule(e, "ModuleTwo")}>
                 <div className="col-4">
                     <h3><button>Module 2</button></h3>
 
@@ -26,7 +26,7 @@ const Overview = ({ switchCurrentModule }) => {
                     <h3 className="module">What is Blockchain?</h3>
                 </div>
             </div>
-            <div className="row" onClick={e => switchCurrentModule(e, "module3")}>
+            <div className="row" onClick={e => switchCurrentModule(e, "ModuleThree")}>
                 <div className="col-4">
                     <h3><button>Module 3</button></h3>
 
@@ -35,7 +35,7 @@ const Overview = ({ switchCurrentModule }) => {
                     <h3 className="module">What is Cryptocurrency?</h3>
                 </div>
             </div>
-            <div className="row" onClick={e => switchCurrentModule(e, "module4")}>
+            <div className="row" onClick={e => switchCurrentModule(e, "ModuleFour")}>
                 <div className="col-4">
                     <h3><button>Module 4</button></h3>
                 </div>
@@ -43,7 +43,7 @@ const Overview = ({ switchCurrentModule }) => {
                     <h3 className="module">Cryptocurrency Wallets</h3>
                 </div>
             </div>
-            <div className="row" onClick={e => switchCurrentModule(e, "module5")}>
+            <div className="row" onClick={e => switchCurrentModule(e, "ModuleFive")}>
                 <div className="col-4">
                     <h3><button>Module 5</button></h3>
 

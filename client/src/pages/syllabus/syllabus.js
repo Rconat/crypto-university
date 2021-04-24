@@ -39,6 +39,7 @@ const Syllabus = () => {
         })
     }, [])
 
+        console.log(syllabi)
     
     // fetch all modules in syllabus
     useEffect(() => {
@@ -66,6 +67,7 @@ const Syllabus = () => {
         content: () => componentRef.current,
     });
     const switchCurrentModule = (e, targetModule) => {
+        console.log(targetModule)
         setCurrentModule(targetModule)
         if (targetModule !== 'syllabus') {
             const syllabus = syllabi.find(item => item.title === targetModule);
