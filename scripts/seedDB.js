@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const User = require("../models/user")
-const MockPortfolio = require("../models/mockportfolio")
+// const MockPortfolio = require("../models/mockportfolio")
 const Portfolio = require("../models/portfolio")
 const Syllabus = require("../models/syllabus")
 const SyllabusData = require("./syllabusData")
@@ -18,7 +18,7 @@ const runSeeder = async () => {
     try {
         // removing all existing data first
         await User.deleteMany({})
-        await MockPortfolio.deleteMany({})
+        // await MockPortfolio.deleteMany({})
         await Portfolio.deleteMany({})
         await Syllabus.deleteMany({})
         // code to seed DB
