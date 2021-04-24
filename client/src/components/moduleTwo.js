@@ -4,7 +4,7 @@ import Blockchain_graph from "../assets/blockchain_graphic.svg"
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
-const ModuleTwo = ({ switchCurrentModule, prev, next }) => {
+const ModuleTwo = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return (
         <div className='container'>
             <div className="row">
@@ -31,7 +31,7 @@ const ModuleTwo = ({ switchCurrentModule, prev, next }) => {
                 <p>&emsp;Since the Bitcoin network also functions through use of a peer-to-peer network the blockchain is available to and managed by anyone that wants to join the network. Because the blockchain ledgers are accessible by anyone it makes it harder for criminals to tamper with the data being distributed over the network. </p>
                 <br />
                 <button onClick={prev}>Syllabus</button>
-                <button>Module 2 Test</button>
+                <button onClick={quizRedirect}>Module 2 Test</button>
                 <button onClick={next}>Next Module</button>
             </div>
         </div>

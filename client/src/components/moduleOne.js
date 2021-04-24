@@ -5,7 +5,7 @@ import Decen_graph from "../assets/decentralization_graphic.svg"
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
-const ModuleOne = ({ switchCurrentModule, prev, next }) => {
+const ModuleOne = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return (
         <div className='container'>
             <div className="row">
@@ -37,7 +37,7 @@ const ModuleOne = ({ switchCurrentModule, prev, next }) => {
             </p>
                 <br />
                 <button onClick={prev}>Syllabus</button>
-                <button>Module 1 Quiz</button>
+                <button onClick={quizRedirect}>Module 1 Quiz</button>
                 <button onClick={next}>Next Module</button>
             </div>
         </div>

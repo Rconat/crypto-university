@@ -14,7 +14,8 @@ const userSchema = new Schema({
     },
     modules: [
         {
-            completed: { type: Number, default: 0 },
+            score: { type: Number, default: 0 },
+            completed: { type: Boolean, default: false },
             syllabus: {
                 type: Schema.Types.ObjectId,
                 ref: 'Syllabus'

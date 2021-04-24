@@ -2,7 +2,7 @@ import React from 'react'
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
-const ModuleThree = ({ switchCurrentModule, prev, next }) => {
+const ModuleThree = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return (
         <div className='container'>
             <div className="row">
@@ -23,7 +23,7 @@ const ModuleThree = ({ switchCurrentModule, prev, next }) => {
                 <p>&emsp;Cryptocurrencies have come a long way since their first conception and implementation and now are being used to store data on blockchains that include things other than just financial transactions. A popular cryptocurrency known as Ethereum uses their P2P network as a way for companies to create decentralized applications which can have any number of uses. These applications would benefit from all the same securities and protections provided by using the blockchain as well as the decentralized network and become a huge selling point to create new and exciting ideas which will ultimately make use of the Ethereum technology.  More recently the Ethereum network has been used to buy and sell NTFs (non-fungible-tokens) which gives the ability to distribute and own digital media such as pictures, videos, and even tweets. There is not much legal precedent in place for NFTs currently but the technology is pushing the limits of how we think about ownership and how we distribute digital goods.</p>
                 <br />
                 <button onClick={prev}>Syllabus</button>
-                <button>Module 3 Test</button>
+                <button onClick={quizRedirect}>Module 3 Test</button>
                 <button onClick={next}>Next Module</button>
             </div>
         </div>

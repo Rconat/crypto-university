@@ -1,17 +1,51 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import Ticker from '../../components/ticker/ticker'
 import { Link } from 'react-router-dom'
 import './dashboard.css'
+import API from '../../utils/API'
 
 const Dashboard = () => {
-
+    const [dashboardModuleProgress, setDashboardModuleProgress] = useState([])
+    const [syllabus, setSyllabus] = useState([])
     const { currentUser } = useAuth()
+    useEffect(() => {
+        Promise.all([
+            API.syllabus(),
+            localStorage.getItem('userId') ? API.getUserById(localStorage.getItem('userId')) : Promise.resolve(null)
+        ]).then(([fetchSyllabus, fetchUser]) => {
+            if (!!fetchUser) {
+                const dashboardProgress = fetchUser.data.modules.reduce((acc, cur) => {
+                    const findSyllabus = fetchSyllabus.data.find(item => item._id === cur.syllabus)
+                    acc.push({ width: (cur.score / findSyllabus.questions.length) * 100, ...cur })
+                    return acc;
+                }, []);
 
+                const syllabi = fetchSyllabus.data.reduce((acc, cur) => {
+                    const findSyllabus = fetchUser.data.modules.find(item => item.syllabus === cur._id);
+                    acc.push({ completed: syllabus.includes(cur._id), width: findSyllabus ? (findSyllabus.score / cur.questions.length) * 100 : 0, ...cur })
+                    return acc;
+                }, [])
+                setDashboardModuleProgress(dashboardProgress);
+                setSyllabus(syllabi)
+            } else {
+                const syllabi = fetchSyllabus.data.map(item => ({ ...item, completed: false }))
+                setSyllabus(syllabi)
+                console.log({ syllabi })
+            }
+        })
+    }, [])
     console.log(currentUser)
-    return(
+    return (
         <>
             <Ticker />
+            {dashboardModuleProgress.map(item => {
+                return (
+                    <div className="progress">
+                        <div className="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{ width: `${item.width}%` }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    </div>
+                )
+            })}
             <br />
             <div className="container dashboard-container">
                 <h1 className="heading">DASHBOARD</h1>
@@ -23,36 +57,20 @@ const Dashboard = () => {
                     <h3 className="your-progress">Your Progress</h3>
                     <br />
                     <div className="row dashboard-row">
-                        <div className="col module-col">
-                            <Link to="/syllabus">
-                                <button className="module-btn">MODULE ONE</button>
-                            </Link>
-                        </div>
-                        <div className="col module-col">
-                            <Link to="/syllabus">
-                                <button className="module-btn">MODULE TWO</button>
-                            </Link>
-                        </div>
-                        <div className="col module-col">
-                            <Link to="/syllabus">
-                                <button className="module-btn">MODULE THREE</button>
-                            </Link>
-                        </div>
-                        <div className="col module-col">
-                            <Link to="/syllabus">
-                                <button className="module-btn">MODULE FOUR</button>
-                            </Link>
-                        </div>
-                        <div className="col module-col">
-                            <Link to="/syllabus">
-                                <button className="module-btn">MODULE FIVE</button>
-                            </Link>
-                        </div>
-                        <div className="col module-col">
-                            <Link to="/syllabus">
-                                <button className="module-btn">MODULE SIX</button>
-                            </Link>
-                        </div>
+                        {syllabus.map(item => {
+                            return (
+                                <>
+                                    <div className="col module-col">
+                                        <Link to="/syllabus">
+                                            <button className="module-btn" style={item.completed ? { background: 'green' } : {}}>{item.title}</button>
+                                        </Link>
+                                    </div>
+                                    <div className="progress">
+                                        <div className="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{ width: `${item.width}%` }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </>
+                            )
+                        })}
                     </div>
                     <br />
                 </div>
