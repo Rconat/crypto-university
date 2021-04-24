@@ -50,6 +50,10 @@ code {
 	color: white;
 }
 
+#email {
+	margin-top: 25px;
+}
+
 form {
   padding: 20px 0;
 	position: relative;
