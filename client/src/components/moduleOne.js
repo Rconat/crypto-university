@@ -5,6 +5,7 @@ import Decen_graph from "../assets/decentralization_graphic.svg"
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
+
 // passing in props for the previous page, next page, and quiz redirect
 const ModuleOne = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return (
@@ -35,6 +36,7 @@ const ModuleOne = ({ switchCurrentModule, quizRedirect, prev, next }) => {
                 <br />
                 <br />
                 <p>&emsp;These peer-to-peer networks also give enhanced protections for the currency in that if any servers go down on the network the data is backed on a number of other locations. Another benefit of the decentralized model is in the structure and function of the network. Because there are many entities on the network all performing the same function an error in one node does not affect the other elements. In a sense they all act as a system of checks that the other systems on the network are all working correctly.
+
             </p>
                 <br />
                 <button onClick={prev}>Syllabus</button>

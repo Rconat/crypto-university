@@ -2,6 +2,7 @@ import React from 'react'
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
+
 // passing in props for the previous page, next page, and quiz redirect
 const ModuleThree = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return (
@@ -27,6 +28,7 @@ const ModuleThree = ({ switchCurrentModule, quizRedirect, prev, next }) => {
                 <button onClick={quizRedirect}>Module 3 Test</button>
                 <button onClick={next}>Next Module</button>
             </div>
+
         </div>
     )
 }

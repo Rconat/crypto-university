@@ -4,6 +4,7 @@ import Blockchain_graph from "../assets/blockchain_graphic.svg"
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
+
 // passing in props for the previous page, next page, and quiz redirect
 const ModuleTwo = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return (
