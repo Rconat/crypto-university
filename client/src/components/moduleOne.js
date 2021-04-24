@@ -5,6 +5,7 @@ import Decen_graph from "../assets/decentralization_graphic.svg"
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
+// passing in props for the previous page, next page, and quiz redirect
 const ModuleOne = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return (
         <div className='container'>

@@ -13,10 +13,20 @@ import ModuleFour from "../../components/moduleFour"
 import ModuleFive from "../../components/moduleFive"
 //importing in styles
 import "./syllabus.css"
+
 const Syllabus = () => {
     const history = useHistory(); // window.history
     const [toggleEducated, setToggleEducated] = useState(false)
     const [fullName, setFullName] = useState('')
+    // react-to-print
+    const componentRef = useRef()
+    const [diplomaVisable, setDiplomaVisable] = useState(false)
+    const [syllabi, setSyllabi] = useState([]);
+    const [currentModule, setCurrentModule] = useState("syllabus");
+    const [quizId, setQuizId] = useState("syllabus");
+    
+    // checks localStorage for user id and grabs the id if available
+    // then returns the data of the current user
     useEffect(() => {
         Promise.all([
             localStorage.getItem('userId') ? API.getUserById(localStorage.getItem('userId')) : Promise.resolve(null)
@@ -28,12 +38,22 @@ const Syllabus = () => {
             }
         })
     }, [])
-    // react-to-print
-    const componentRef = useRef()
-    const [diplomaVisable, setDiplomaVisable] = useState(false)
-    const [syllabi, setSyllabi] = useState([]);
-    const [currentModule, setCurrentModule] = useState("syllabus");
-    const [quizId, setQuizId] = useState("syllabus");
+
+    
+    // fetch all modules in syllabus
+    useEffect(() => {
+        let mounted = true;
+        API.syllabus().then(response => {
+            if (mounted) {
+                setSyllabi(response.data)
+            }
+        })
+        return () => {
+            mounted = false;
+        }
+    }, [])
+
+    // returns react component based on current module
     const CurrentComponent = {
         "syllabus": () => <Overview switchCurrentModule={switchCurrentModule} />,
         "ModuleOne": (quizId) => <ModuleOne switchCurrentModule={switchCurrentModule} quizRedirect={() => history.push(`/quiz/${quizId}`)} prev={(e) => switchCurrentModule(e, 'syllabus')} next={(e) => switchCurrentModule(e, 'ModuleTwo')} />,
@@ -54,17 +74,6 @@ const Syllabus = () => {
         window.scrollTo(0, 100)
     }
 
-    useEffect(() => {
-        let mounted = true;
-        API.syllabus().then(response => {
-            if (mounted) {
-                setSyllabi(response.data)
-            }
-        })
-        return () => {
-            mounted = false;
-        }
-    }, [])
     return (
         <>
             <br />

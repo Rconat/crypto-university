@@ -9,6 +9,9 @@ const Dashboard = () => {
     const [dashboardModuleProgress, setDashboardModuleProgress] = useState([])
     const [syllabus, setSyllabus] = useState([])
     const { currentUser } = useAuth()
+
+    // grabs the user id from localStorage and looks at the current progress the user has
+    // also renders all modules in the syllabus
     useEffect(() => {
         Promise.all([
             API.syllabus(),

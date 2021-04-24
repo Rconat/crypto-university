@@ -2,6 +2,7 @@ import React from 'react'
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
+// tweaked module file names to match data structure in parent file
 const Overview = ({ switchCurrentModule }) => {
     return(
         <div className="overview container">

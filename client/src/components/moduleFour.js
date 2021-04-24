@@ -5,6 +5,7 @@ import Trans_graph from "../assets/transaction_graphic.svg"
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
+// passing in props for the previous page, next page, and quiz redirect
 const ModuleFour = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return (
         <div className='container'>
