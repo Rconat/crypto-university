@@ -1,0 +1,15 @@
+.account-container {
+    margin-top: 30px;
+}
+
+.account-text {
+    font-family: 'Quicksand', sans-serif;
+	color: white;
+    text-align: center;
+}
+
+.account-form {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
