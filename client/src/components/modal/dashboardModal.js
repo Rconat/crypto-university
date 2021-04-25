@@ -7,14 +7,13 @@ Modal.setAppElement('#root')
 const DashboardModal = () => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
-    
 
     return (
         <>
             <div className="modal-button">
-                
-                <button onClick={() => {setModalIsOpen(true) }}>First time? Click Me</button>
+                <button onClick={() => setModalIsOpen(true)}>First time? Click Me</button>
             </div>
+            
             <Modal
                 isOpen={modalIsOpen}
                 onRequestClose={() => setModalIsOpen(false)}
