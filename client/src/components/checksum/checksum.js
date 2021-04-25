@@ -14,8 +14,8 @@ function Checksum() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(e)
-        console.log("target Value -", parseInt(e.target[0].value))
+        // console.log(e)
+        // console.log("target Value -", parseInt(e.target[0].value))
 
         setUserEntry(parseInt(e.target[0].value))
     }
@@ -66,13 +66,13 @@ function Checksum() {
     }, [])
 
     useEffect(() => {
-        console.log("User Entry -", userEntry)
-
+        // console.log("User Entry -", userEntry)
         // checking user input against remainder
         checkNum()
 
         // clearing the user input
         clearInput()
+
     }, [userEntry])
 
     return <div id="checksumGame">
