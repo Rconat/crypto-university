@@ -3,7 +3,7 @@ import "./checksum.css"
 
 function Checksum() {
 
-    const [userNum, setUserNum] = useState(1)
+    const [userEntry, setUserEntry] = useState(1)
     const [randomNums, setRandomNums] = useState([])
     const [divisor, setDivisor] = useState(1)
     const [remainder, setRemainder] = useState(1)
@@ -59,7 +59,7 @@ function Checksum() {
     
         <div id="textField">
             <form>
-                <textarea id="userEntry"></textarea>
+                <input type="text" id="userEntry"/>
             </form>
         </div>
     
