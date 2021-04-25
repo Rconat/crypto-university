@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import "./checksum.css"
 
-function Checksum(props) {
+function Checksum() {
 
     const [userEntry, setUserEntry] = useState(1)
     const [randomNums, setRandomNums] = useState([])
@@ -13,7 +13,7 @@ function Checksum(props) {
         console.log("target Value -", e.target[0].value)
 
         setUserEntry(e.target[0].value)
-        .then(console.log("User Entry -", userEntry))
+        console.log("User Entry -", userEntry)
     }
 
     const generateRandomNums = () => {
