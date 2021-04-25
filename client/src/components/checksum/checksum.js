@@ -3,6 +3,7 @@ import "./checksum.css"
 
 function Checksum() {
 
+    const [userScore, setUserScore] = useState (0)
     const [userEntry, setUserEntry] = useState(1)
     const [randomNums, setRandomNums] = useState([])
     const [divisor, setDivisor] = useState(1)
@@ -10,10 +11,22 @@ function Checksum() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("target Value -", e.target[0].value)
+        console.log(e)
+        console.log("target Value -", parseInt(e.target[0].value))
 
-        setUserEntry(e.target[0].value)
+        setUserEntry(parseInt(e.target[0].value))
         console.log("User Entry -", userEntry)
+
+        checkNum()
+    }
+
+    const checkNum = () => {
+        if (userEntry === remainder) {
+            setUserScore(userScore + 1)
+            generateRandomNums()
+        } else {
+            generateRandomNums()
+        }
     }
 
     const generateRandomNums = () => {
@@ -44,7 +57,7 @@ function Checksum() {
 
     // console.log("random numbers", randomNums);
     // console.log("divisor", divisor)
-    // console.log("remainder", remainder)
+    console.log("remainder", remainder)
     
 
     useEffect(() => {
@@ -52,6 +65,9 @@ function Checksum() {
     }, [])
 
     return <div id="checksumGame">
+        <div id="row">
+            <h3>Score - {userScore}</h3>
+        </div>
         
         <div id="row">
 
