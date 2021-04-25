@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useAuth } from '../../contexts/AuthContext'
 import Ticker from '../../components/ticker/ticker'
+import DashboardModal from '../../components/modal/dashboardModal'
 import { Link } from 'react-router-dom'
-import './dashboard.css'
 import API from '../../utils/API'
+import './dashboard.css'
 
 const Dashboard = () => {
     const [dashboardModuleProgress, setDashboardModuleProgress] = useState([])
@@ -55,10 +56,11 @@ const Dashboard = () => {
                 <br />
                 <h2 className="welcome-user">Welcome {currentUser.email}
                 </h2>
+                <DashboardModal />
                 <br />
                 <div className="container progress-container">
                     <h3 className="your-progress">Your Progress</h3>
-                    <br />
+                    {/* <br /> */}
                     <div className="row dashboard-row">
                         {syllabus.map(item => {
                             return (
