@@ -33,7 +33,8 @@
     "express": "^4.17.1",
     "firebase": "^8.4.1",
     "if-env": "^1.0.4",
-    "mongoose": "^5.12.3"
+    "mongoose": "^5.12.3",
+    "react-modal": "^3.13.1"
   },
   "bugs": {
     "url": "https://github.com/Rconat/crypto-university/issues"
