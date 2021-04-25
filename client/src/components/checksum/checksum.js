@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import "./checksum.css"
 
-function Checksum() {
+function Checksum(props) {
 
     const [userEntry, setUserEntry] = useState(1)
     const [randomNums, setRandomNums] = useState([])
     const [divisor, setDivisor] = useState(1)
     const [remainder, setRemainder] = useState(1)
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log("target Value -", e.target[0].value)
+
+        setUserEntry(e.target[0].value)
+        .then(console.log("User Entry -", userEntry))
+    }
 
     const generateRandomNums = () => {
 
@@ -30,13 +38,15 @@ function Checksum() {
     
         setRemainder(sum % localDivisor)
     
-        console.log("sum of numbers", sum)
+        // console.log("sum of numbers", sum)
+
     }
 
-    console.log("random numbers", randomNums);
-    console.log("divisor", divisor)
-    console.log("remainder", remainder)
+    // console.log("random numbers", randomNums);
+    // console.log("divisor", divisor)
+    // console.log("remainder", remainder)
     
+
     useEffect(() => {
         generateRandomNums()
     }, [])
@@ -58,8 +68,11 @@ function Checksum() {
         </div>
     
         <div id="textField">
-            <form>
-                <input type="text" id="userEntry"/>
+            <form onSubmit={handleSubmit}>
+                <input 
+                    type="text" 
+                    id="userEntry"
+                />
             </form>
         </div>
     
