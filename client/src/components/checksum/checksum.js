@@ -9,6 +9,10 @@ function Checksum() {
     const [divisor, setDivisor] = useState(1)
     const [remainder, setRemainder] = useState(1)
 
+    const textInput = React.useRef()
+
+    const clearInput = () => (textInput.current.value = "")
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(e)
@@ -17,10 +21,15 @@ function Checksum() {
         setUserEntry(parseInt(e.target[0].value))
         console.log("User Entry -", userEntry)
 
+        // checking user input against remainder
         checkNum()
+
+        // clearing the user input
+        clearInput()
     }
 
     const checkNum = () => {
+        console.log("On Form Submit", remainder, userEntry)
         if (userEntry === remainder) {
             setUserScore(userScore + 1)
             generateRandomNums()
@@ -58,7 +67,7 @@ function Checksum() {
     // console.log("random numbers", randomNums);
     // console.log("divisor", divisor)
     console.log("remainder", remainder)
-    
+    console.log("user Entry -", userEntry)
 
     useEffect(() => {
         generateRandomNums()
@@ -86,6 +95,7 @@ function Checksum() {
         <div id="textField">
             <form onSubmit={handleSubmit}>
                 <input 
+                    ref={textInput}
                     type="text" 
                     id="userEntry"
                 />
