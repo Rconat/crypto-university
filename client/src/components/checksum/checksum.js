@@ -10,7 +10,6 @@ function Checksum() {
     const [remainder, setRemainder] = useState(1)
 
     const textInput = React.useRef()
-
     const clearInput = () => (textInput.current.value = "")
 
     const handleSubmit = (e) => {
@@ -19,13 +18,6 @@ function Checksum() {
         console.log("target Value -", parseInt(e.target[0].value))
 
         setUserEntry(parseInt(e.target[0].value))
-        console.log("User Entry -", userEntry)
-
-        // checking user input against remainder
-        checkNum()
-
-        // clearing the user input
-        clearInput()
     }
 
     const checkNum = () => {
@@ -72,6 +64,16 @@ function Checksum() {
     useEffect(() => {
         generateRandomNums()
     }, [])
+
+    useEffect(() => {
+        console.log("User Entry -", userEntry)
+
+        // checking user input against remainder
+        checkNum()
+
+        // clearing the user input
+        clearInput()
+    }, [userEntry])
 
     return <div id="checksumGame">
         <div id="row">
