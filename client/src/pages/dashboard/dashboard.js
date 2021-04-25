@@ -8,6 +8,7 @@ import API from '../../utils/API'
 const Dashboard = () => {
     const [dashboardModuleProgress, setDashboardModuleProgress] = useState([])
     const [syllabus, setSyllabus] = useState([])
+    const [fullName, setFullName] = useState('')
     const { currentUser } = useAuth()
 
     // grabs the user id from localStorage and looks at the current progress the user has
@@ -31,6 +32,7 @@ const Dashboard = () => {
                 }, [])
                 setDashboardModuleProgress(dashboardProgress);
                 setSyllabus(syllabi)
+                setFullName([fetchUser.data.firstName, fetchUser.data.lastName].filter(Boolean).join(' '))
             } else {
                 const syllabi = fetchSyllabus.data.map(item => ({ ...item, completed: false }))
                 setSyllabus(syllabi)
@@ -53,7 +55,7 @@ const Dashboard = () => {
             <div className="container dashboard-container">
                 <h1 className="heading">DASHBOARD</h1>
                 <br />
-                <h2 className="welcome-user">Welcome {currentUser.email}
+                <h2 className="welcome-user">Welcome {!!fullName ? fullName : currentUser.email}
                 </h2>
                 <br />
                 <div className="container progress-container">
