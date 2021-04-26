@@ -1,0 +1,13 @@
+#start-check-btn {
+    display: inline;
+    justify-content: center;
+    margin: auto;
+    color: black;
+    background-color: #b8de6f;
+    font-family: 'Quicksand', sans-serif;
+    width: 200px;
+}
+
+#start-check-btn:hover {
+    background-color: #f1e189;
+}
