@@ -28,12 +28,12 @@ const Syllabus = () => {
     // checks localStorage for user id and grabs the id if available
     // then returns the data of the current user
     useEffect(() => {
-        Promise.all([
-            localStorage.getItem('userId') ? API.getUserById(localStorage.getItem('userId')) : Promise.resolve(null)
-        ]).then(([fetchUser]) => {
+        API.checkUserEducation(localStorage.getItem('userId')).then(() => {
+            return API.getUserById(localStorage.getItem('userId'))
+        }).then((fetchUser) => {
             if (!!fetchUser) {
                 setToggleEducated(fetchUser.data.educated)
-                setFullName(fetchUser.data.firstName + fetchUser.data.lastName)
+                setFullName([fetchUser.data.firstName, fetchUser.data.lastName].filter(Boolean).join(' '))
                 console.log(fetchUser.data.firstName, fetchUser.data.lastName);
             }
         })
