@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom'
 import API from '../../utils/API.js'
+import "./quiz.css"
 
 const Quiz = () => {
 	// syllabus id returns current syllabus which contains questions
@@ -60,7 +61,7 @@ const Quiz = () => {
 						</div>
 						<div className='answer-section'>
 							{questions[question].answers.map((specificAnswer, index) => (
-								<button
+								<button id="answer-btn"
 									key={index}
 									onClick={() => handleAnswerClick(specificAnswer, questions[question])}
 								>

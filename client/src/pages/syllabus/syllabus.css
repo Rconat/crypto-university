@@ -6,16 +6,19 @@
 }
 
 p {
-    font-size: 120%;
+    font-family: 'Orelega One';
+    font-size: 150%;
     margin-bottom: 30px;
 }
 
 h1 {
+    font-family: 'Orelega One';
     text-align: center;
 }
 
 h3 {
-    font-size: 140%;
+    font-family: 'Orelega One';
+    font-size: 180%;
     text-align: center;
 }
 

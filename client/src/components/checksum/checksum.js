@@ -89,7 +89,7 @@ function Checksum() {
     return <div id="checksumGame" className="container">
         <div className="row">
             <div className="col-6">
-                <h1 id="score">Score - {userScore}</h1>
+                <h1 id="score">Score : {userScore}</h1>
             </div>
             <div className="col-6">
                 <Timer/>

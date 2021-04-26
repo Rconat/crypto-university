@@ -44,7 +44,6 @@
 }
 
 #textField {
-    background-color: #72C605;
     width: 100px;
     height: 100px;
     border: 2px solid black;
@@ -62,6 +61,7 @@ form {
 }
 
 #userEntry {
+    background-color: #b8de6f;;
     resize: none;
     font-size: 260%;
     max-width: 96px;
