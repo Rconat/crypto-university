@@ -115,7 +115,9 @@ const Investments = () => {
     return (
         <>
             <Ticker />
-            <div>PRICES</div>
+            <br/>
+            <h1>Current Cryptocurrency Prices</h1>
+            <br/>
             <Table
                 columns={columns}
                 rows={rows}
