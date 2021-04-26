@@ -26,12 +26,27 @@
     color: white;
 }
 
+.progress-bar {
+    max-width: 100%;
+}
+
+.progress {
+    margin:auto;
+    max-width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .your-progress {
     color: white;
 }
 
 .module-col {
     margin: 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 .module-btn {

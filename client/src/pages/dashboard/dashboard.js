@@ -48,7 +48,7 @@ const Dashboard = () => {
             {dashboardModuleProgress.map(item => {
                 return (
                     <div className="progress">
-                        <div className="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{ width: `${item.width}%` }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        <div className="progress-bar progress-bar-striped bg-success" role="progressbar" style={{ width: `${item.width}%` }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 )
             })}
@@ -73,7 +73,7 @@ const Dashboard = () => {
                                         </Link>
                                     </div>
                                     <div className="progress">
-                                        <div className="progress-bar progress-bar-striped bg-danger" role="progressbar" style={{ width: `${item.width}%` }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        <div className="progress-bar progress-bar-striped bg-success" role="progressbar" style={{ width: `${item.width}%` }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
                                 </>
                             )
