@@ -32,9 +32,11 @@ const ModuleTwo = ({ switchCurrentModule, quizRedirect, prev, next }) => {
                 <br />
                 <p>&emsp;Since the Bitcoin network also functions through use of a peer-to-peer network the blockchain is available to and managed by anyone that wants to join the network. Because the blockchain ledgers are accessible by anyone it makes it harder for criminals to tamper with the data being distributed over the network. </p>
                 <br />
-                <button onClick={prev}>Syllabus</button>
-                <button onClick={quizRedirect}>Module 2 Test</button>
-                <button onClick={next}>Next Module</button>
+                <div className="button-div">
+                    <button className="syl-nav-btn" onClick={prev}>Previous Module</button>
+                    <button className="syl-nav-btn" onClick={quizRedirect}>Module 2 Quiz</button>
+                    <button className="syl-nav-btn" onClick={next}>Next Module</button>
+                </div>
             </div>
         </div>
     )

@@ -1,8 +1,14 @@
 import React from 'react'
-import Checksum from '../../components/checksum/checksum'
+import ChecksumInfo from "../../components/checksumInfo/checksumInfo"
+import Checksum from "../../components/checksum/checksum"
 
-const Games = () => (
-    <Checksum />
-)
+const Games = () => {
+    return(
+    <>
+        <ChecksumInfo />
+        <Checksum />
+    </>
+    )
+}
 
 export default Games

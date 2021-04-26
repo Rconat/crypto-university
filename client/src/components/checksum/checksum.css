@@ -19,12 +19,28 @@
     margin-left: 25px;
 }
 
+#checkRow {
+    text-align: right;
+    display: block;
+    margin: auto;
+}
+
 #divisorText {
     line-height: 94px;
 }
 
 #row {
     display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+#score {
+    text-align: center;
+}
+
+#timer {
+    text-align: right;
 }
 
 #textField {
@@ -32,7 +48,12 @@
     height: 100px;
     border: 2px solid black;
     margin: 5px;
+    margin-left: 11.4%;
     margin-top: 30px;
+}
+
+#gameNums {
+    justify-content: center;
 }
 
 form {
@@ -40,6 +61,7 @@ form {
 }
 
 #userEntry {
+    background-color: #b8de6f;;
     resize: none;
     font-size: 260%;
     max-width: 96px;

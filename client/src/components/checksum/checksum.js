@@ -1,12 +1,35 @@
 import React, { useState, useEffect } from 'react'
 import "./checksum.css"
+import Timer from "../timer"
 
 function Checksum() {
 
-    const [userNum, setUserNum] = useState(1)
+    const [userScore, setUserScore] = useState(0)
+    const [userEntry, setUserEntry] = useState()
     const [randomNums, setRandomNums] = useState([])
     const [divisor, setDivisor] = useState(1)
     const [remainder, setRemainder] = useState(1)
+
+    const textInput = React.useRef()
+    const clearInput = () => (textInput.current.value = "")
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // console.log(e)
+        // console.log("target Value -", parseInt(e.target[0].value))
+
+        setUserEntry(parseInt(e.target[0].value))
+    }
+
+    const checkNum = () => {
+        console.log("On Form Submit", remainder, userEntry)
+        if (userEntry === remainder) {
+            setUserScore(userScore + 1)
+            generateRandomNums()
+        } else {
+            generateRandomNums()
+        }
+    }
 
     const generateRandomNums = () => {
 
@@ -30,18 +53,48 @@ function Checksum() {
     
         setRemainder(sum % localDivisor)
     
-        console.log("sum of numbers", sum)
+        // console.log("sum of numbers", sum)
+
     }
 
-    console.log("random numbers", randomNums);
-    console.log("divisor", divisor)
+    const checkScore = () => {
+        if (userScore === 10) {
+            console.log("You have passed the Checksum game!")
+        }
+    }
+
+    // console.log("random numbers", randomNums);
+    // console.log("divisor", divisor)
     console.log("remainder", remainder)
-    
+    console.log("user Entry -", userEntry)
+
     useEffect(() => {
         generateRandomNums()
     }, [])
 
-    return <div id="checksumGame">
+    useEffect(() => {
+        // console.log("User Entry -", userEntry)
+        // checking user input against remainder
+        checkNum()
+
+        // clearing the user input
+        clearInput()
+
+    }, [userEntry])
+
+    useEffect(() => {
+        checkScore()
+    }, [userScore])
+
+    return <div id="checksumGame" className="container">
+        <div className="row">
+            <div className="col-6">
+                <h1 id="score">Score : {userScore}</h1>
+            </div>
+            <div className="col-6">
+                <Timer/>
+            </div>
+        </div>
         
         <div id="row">
 
@@ -56,11 +109,22 @@ function Checksum() {
             </div>
 
         </div>
-    
-        <div id="textField">
-            <form>
-                <textarea id="userEntry"></textarea>
-            </form>
+        
+        <div className="row">
+            <div className="col-8" id="checkRow">
+                <h1 id="checkRow">Checksum Verification Number - </h1>
+            </div>
+            <div className="col-4">
+                <div id="textField">
+                    <form onSubmit={handleSubmit}>
+                        <input 
+                            ref={textInput}
+                            type="text" 
+                            id="userEntry"
+                        />
+                    </form>
+                </div>
+            </div>
         </div>
     
     </div>

@@ -39,9 +39,11 @@ const ModuleOne = ({ switchCurrentModule, quizRedirect, prev, next }) => {
 
             </p>
                 <br />
-                <button onClick={prev}>Syllabus</button>
-                <button onClick={quizRedirect}>Module 1 Quiz</button>
-                <button onClick={next}>Next Module</button>
+                <div className="button-div">
+                    <button className="syl-nav-btn" onClick={prev}>Syllabus</button>
+                    <button className="syl-nav-btn" onClick={quizRedirect}>Module 1 Quiz</button>
+                    <button className="syl-nav-btn" onClick={next}>Next Module</button>
+                </div>
             </div>
         </div>
     )
