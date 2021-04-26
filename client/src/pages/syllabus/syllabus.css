@@ -51,3 +51,38 @@ h4 {
 body {
     overflow-x:hidden;
 }
+
+.syl-nav-btn {
+    display: inline;
+    justify-content: center;
+    margin: auto;
+    color: black;
+    background-color: #b8de6f;
+    font-family: 'Quicksand', sans-serif;
+    width: 200px;
+}
+
+.syl-nav-btn:hover {
+    background-color: #f1e189;
+}
+
+.module-btn {
+    display: inline;
+    justify-content: center;
+    margin: auto;
+    color: black;
+    background-color: #b8de6f;
+    font-family: 'Quicksand', sans-serif;
+    width: 200px;
+}
+
+.module-btn:hover {
+    background-color: #f1e189;
+}
+
+.button-div {
+    padding: 50px;
+    display: flex;
+    margin: auto;
+    max-width: 90%;
+}

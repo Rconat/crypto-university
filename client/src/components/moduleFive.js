@@ -24,9 +24,11 @@ const ModuleFive = ({ switchCurrentModule, quizRedirect, prev, next }) => {
                 <br />
                 <p>&emsp;Storing cryptocurrency on a physical Hard Drive is a great way to maintain a “Cold” wallet but even this method is not foolproof to keeping your currency safe. James Howells, a 35-year-old IT engineer from Wales said he accidentally threw away a harddrive containing the private key needed to access his currency. Howells claims to have had 7,500 bitcoins in the wallet that the private key gave access to. As of April 2021 the value of those bitcoins would amount to over $384 million US. In Howells’ case he was to blame for recklessly discarding his Hard Drive however Hard Drives have the potential to become corrupted since they do wear out over time. Backing up this data in multiple places can certainly save a lot of stress and headaches.</p>
                 <br />
-                <button onClick={prev}>Syllabus</button>
-                <button onClick={quizRedirect}>Module 5 quiz</button>
-                <button onClick={next}>Next Module</button>
+                <div className="button-div">
+                    <button className="syl-nav-btn" onClick={prev}>Previous Module</button>
+                    <button className="syl-nav-btn" onClick={quizRedirect}>Module 5 Quiz</button>
+                    <button className="syl-nav-btn" onClick={next}>Syllabus</button>
+                </div>
             </div>
         </div>
     )
