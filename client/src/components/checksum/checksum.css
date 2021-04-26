@@ -25,14 +25,30 @@
 
 #row {
     display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+#score {
+    text-align: center;
+}
+
+#timer {
+    text-align: right;
 }
 
 #textField {
+    background-color: #72C605;
     width: 100px;
     height: 100px;
     border: 2px solid black;
     margin: 5px;
+    margin-left: 11.4%;
     margin-top: 30px;
+}
+
+#gameNums {
+    justify-content: center;
 }
 
 form {

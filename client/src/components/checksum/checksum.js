@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import "./checksum.css"
+import Timer from "../timer"
 
 function Checksum() {
 
-    const [userScore, setUserScore] = useState (0)
-    const [userEntry, setUserEntry] = useState(1)
+    const [userScore, setUserScore] = useState(0)
+    const [userEntry, setUserEntry] = useState()
     const [randomNums, setRandomNums] = useState([])
     const [divisor, setDivisor] = useState(1)
     const [remainder, setRemainder] = useState(1)
@@ -56,6 +57,12 @@ function Checksum() {
 
     }
 
+    const checkScore = () => {
+        if (userScore === 10) {
+            console.log("You have passed the Checksum game!")
+        }
+    }
+
     // console.log("random numbers", randomNums);
     // console.log("divisor", divisor)
     console.log("remainder", remainder)
@@ -75,9 +82,18 @@ function Checksum() {
 
     }, [userEntry])
 
-    return <div id="checksumGame">
-        <div id="row">
-            <h3>Score - {userScore}</h3>
+    useEffect(() => {
+        checkScore()
+    }, [userScore])
+
+    return <div id="checksumGame" className="container">
+        <div className="row">
+            <div className="col-6">
+                <h1 id="score">Score - {userScore}</h1>
+            </div>
+            <div className="col-6">
+                <Timer/>
+            </div>
         </div>
         
         <div id="row">

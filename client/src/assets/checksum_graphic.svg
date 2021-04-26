@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 15.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="600px" height="300px" viewBox="0 0 600 300" enable-background="new 0 0 600 300" xml:space="preserve">
+<rect y="0" fill="#FDF8E5" width="600" height="300"/>
+<rect x="501.573" y="72.954" fill="#F1E188" stroke="#000000" stroke-miterlimit="10" width="33.427" height="33.425"/>
+<rect x="401.298" y="72.954" fill="#A8DDE2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="33.426" height="33.425"/>
+<rect x="351.161" y="72.954" fill="#A8DDE2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="33.426" height="33.425"/>
+<rect x="301.022" y="72.954" fill="#A8DDE2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="33.425" height="33.425"/>
+<rect x="250.886" y="72.954" fill="#A8DDE2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="33.424" height="33.425"/>
+<rect x="200.748" y="72.954" fill="#A8DDE2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="33.425" height="33.425"/>
+<rect x="150.609" y="72.954" fill="#A8DDE2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="33.425" height="33.425"/>
+<rect x="100.472" y="72.954" fill="#A8DDE2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="33.425" height="33.425"/>
+<rect x="50.333" y="72.954" fill="#A8DDE2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" width="33.425" height="33.425"/>
+<text transform="matrix(1 0 0 1 191.6665 63.334)" font-family="'MyriadPro-Bold'" font-size="18">Hashed Data</text>
+<text transform="matrix(1 0 0 1 488.666 63.667)" font-family="'MyriadPro-Bold'" font-size="18">Divisor</text>
+<text transform="matrix(1 0 0 1 56.8726 95.7754)" font-family="'MyriadPro-Regular'" font-size="17.383">13</text>
+<text transform="matrix(1 0 0 1 108.1924 95.3613)" font-family="'MyriadPro-Regular'" font-size="17.383">12</text>
+<text transform="matrix(1 0 0 1 162.8252 95.3633)" font-family="'MyriadPro-Regular'" font-size="17.383">9</text>
+<text transform="matrix(1 0 0 1 212.0781 94.9473)" font-family="'MyriadPro-Regular'" font-size="17.383">6</text>
+<text transform="matrix(1 0 0 1 263.8125 94.5352)" font-family="'MyriadPro-Regular'" font-size="17.383">4</text>
+<text transform="matrix(1 0 0 1 308.9258 94.9473)" font-family="'MyriadPro-Regular'" font-size="17.383">16</text>
+<text transform="matrix(1 0 0 1 359.0029 95.3613)" font-family="'MyriadPro-Regular'" font-size="17.383">17</text>
+<text transform="matrix(1 0 0 1 408.2559 96.1895)" font-family="'MyriadPro-Regular'" font-size="17.383">10</text>
+<text transform="matrix(1 0 0 1 512.9658 94.5342)" font-family="'MyriadPro-Regular'" font-size="17.383">6</text>
+<text transform="matrix(1 0 0 1 180.9995 168.334)"><tspan x="0" y="0" font-family="'MyriadPro-Regular'" font-size="18">13 + 12 + 9 + 6 + 4 + 16 + 17 + 10 = 87</tspan><tspan x="0" y="21.6" font-family="'MyriadPro-Regular'" font-size="18">87 / 6 = 14 remainder 3</tspan><tspan x="0" y="43.201" font-family="'MyriadPro-Bold'" font-size="18">3 is the checksum</tspan></text>
+<rect x="77" y="162.954" fill="#BAD872" stroke="#000000" stroke-miterlimit="10" width="33.425" height="33.425"/>
+<text transform="matrix(1 0 0 1 89 185)" font-family="'MyriadPro-Bold'" font-size="18">3</text>
+<g>
+	
+		<circle fill="none" stroke="#000000" stroke-miterlimit="10" stroke-dasharray="12.4758,12.4758" cx="94.25" cy="179.25" r="35.75"/>
+</g>
+<text transform="matrix(1 0 0 1 55 234.999)" font-family="'MyriadPro-Bold'" font-size="18">checksum</text>
+</svg>
