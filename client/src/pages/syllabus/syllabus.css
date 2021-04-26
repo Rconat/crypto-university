@@ -23,18 +23,17 @@
 }
 
 p {
-    font-family: 'Orelega One';
+    font-family: 'Quicksand', sans-serif;
     font-size: 150%;
     margin-bottom: 30px;
 }
 
 h1 {
-    font-family: 'Orelega One';
+    font-family: 'Quicksand', sans-serif;
     text-align: center;
 }
 
 h3 {
-    font-family: 'Orelega One';
     font-size: 180%;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
@@ -46,6 +45,7 @@ h3 {
 }
 
 h4 {
+    font-family: 'Quicksand', sans-serif;
     font-size: 120%;
     font-weight: bold;
     text-align: center;
