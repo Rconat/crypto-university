@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef, useMemo } from 'react';
 import API from './../../utils/API.js';
 import Table from './../../components/table'
 import Ticker from '../../components/ticker/ticker'
+import "./prices.css"
 
 const formatter = new Intl.NumberFormat('en-US', {
     style: 'currency',
@@ -115,7 +116,9 @@ const Investments = () => {
     return (
         <>
             <Ticker />
-            <div>PRICES</div>
+            <br/>
+            <h1>Current Cryptocurrency Prices</h1>
+            <br/>
             <Table
                 columns={columns}
                 rows={rows}

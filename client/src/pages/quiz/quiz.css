@@ -32,3 +32,11 @@
 #answer-btn:hover {
     background-color: #f1e189;
 }
+
+.score-section {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 180%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: center;
+}
