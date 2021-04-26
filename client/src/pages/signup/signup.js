@@ -25,7 +25,7 @@ const Signup = () => {
             setError('')
             setLoading(true)
             await signup(emailRef.current.value, passwordRef.current.value);
-            history.push('/dashboard')
+            history.push('/')
         } catch (error) {
             console.log(error.message)
             setError(error.message)
