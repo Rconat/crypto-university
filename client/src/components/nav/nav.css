@@ -1,5 +1,10 @@
 .navbar {
+    background-color: #FDF8E5;
     font-family: 'Quicksand', sans-serif;
+}
+
+.container-fluid {
+    background-color: #FDF8E5;
 }
 
 .CULogo {
@@ -30,6 +35,10 @@
     border-radius: 5px;
 }
 
+.nav-link {
+    font-weight: bold;
+}
+
 .nav-item {
     margin-right: 10px;
     padding: 5px;
@@ -49,6 +58,6 @@
 }
 
 .logout-btn:hover {
-    background-color: #01c5c4;
+    background-color: #A8DDE2;
 }
 
