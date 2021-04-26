@@ -109,15 +109,22 @@ function Checksum() {
             </div>
 
         </div>
-    
-        <div id="textField">
-            <form onSubmit={handleSubmit}>
-                <input 
-                    ref={textInput}
-                    type="text" 
-                    id="userEntry"
-                />
-            </form>
+        
+        <div className="row">
+            <div className="col-8" id="checkRow">
+                <h1 id="checkRow">Checksum Verification Number - </h1>
+            </div>
+            <div className="col-4">
+                <div id="textField">
+                    <form onSubmit={handleSubmit}>
+                        <input 
+                            ref={textInput}
+                            type="text" 
+                            id="userEntry"
+                        />
+                    </form>
+                </div>
+            </div>
         </div>
     
     </div>

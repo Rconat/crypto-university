@@ -19,6 +19,12 @@
     margin-left: 25px;
 }
 
+#checkRow {
+    text-align: right;
+    display: block;
+    margin: auto;
+}
+
 #divisorText {
     line-height: 94px;
 }
