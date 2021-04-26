@@ -1,7 +1,7 @@
 
 const table = (props) => {
     return (
-        <div style={{ overflowX: 'auto'}}>
+        <div id="table" style={{ overflowX: 'auto'}}>
             <table className="table" >
                 <thead>
                     <tr>
