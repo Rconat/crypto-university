@@ -10,9 +10,8 @@ const About = () => {
             <br />
             <div className="container about-container">
                 <h1 className="about-heading">About Us</h1>
-                <br />
                 <p className="about-info">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    We are a group of students all enrolled in the Coding Bootcamp program at Northwestern University in conjunction with Trilogy Education Services. This course specializes on Full Stack Web Development and for this application we have made use of a full MERN stack. This application is our final project and upon completion we will be certified Web Developers looking to jump into this growing industry. With a passion for technology and a love of internet applications we are each looking forward to our new future as web developers. Please check out our Github profiles below for more information on our projects.
                 </p>
                 <div className="container profile-container">
                     <div className="david"></div>

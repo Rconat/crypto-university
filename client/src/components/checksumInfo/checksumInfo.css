@@ -11,3 +11,8 @@
 #start-check-btn:hover {
     background-color: #f1e189;
 }
+
+#game-start {
+    color: black;
+    padding-bottom: 40px;
+}

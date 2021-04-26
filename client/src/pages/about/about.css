@@ -12,9 +12,14 @@
     padding: 10px;
     font-weight: 300;
     color: white;
+	padding-top: 30px;
 }
 
 .about-info {
+	max-width: 85%;
+	margin: auto;
+	margin-bottom: 20px;
+	justify-content: center;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     padding: 10px;
@@ -22,6 +27,9 @@
 }
 
 .profile-container {
+	display: flex;
+	margin: auto;
+	justify-content: center;
     text-align: center;
 }
 
@@ -40,4 +48,5 @@
 	opacity: 90%;
 	font-family: 'Quicksand', sans-serif;
     margin: 10px;
+	margin-bottom: 40px;
 }

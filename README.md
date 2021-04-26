@@ -1,5 +1,101 @@
 # Crypto University
 
+## Description
+
+The purpose of this project was to create a full stack MERN application. The project must be hosted through Heroku.
+
+To fulfill these requirements we have a created Crypto University
+
+Crypto University is an application that allows users to educate themselves on cryptocurrencies. We provide educational content that is important to the understanding of cryptocurrencies as well as some basic information on how to safely engage in buying and storing the currencies. We also provide a quick price checker to allow the user to check on the current prices of cryptocurrencies as well. 
+
+You can find the repo on [GitHub](https://github.com/Rconat/crypto-university).
+
+The project is deployed on [Heroku](https://sheltered-garden-64832.herokuapp.com/).
+
+---
+
+## Table of Contents
+
+* [MERN Stack](#MERN-Stack)
+* [Explanation of Code](#Explanation-of-Code)
+    * [Firebase Authentication](#Firebase-Authentication)
+    * [Express NPM](#Express-NPM)
+    * [JavaScript Libraries](#JavaScript-Libraries)
+    * [React-to-print](#React-to-print)
+    * [Usage](#Usage)
+* [Credits](#Credits)
+
+
+---
+
+## MERN stack
+
+[MongoDB](https://www.mongodb.com/)
+
+[Express.js](https://expressjs.com/)
+
+[React.js](https://reactjs.org/)
+
+[Node.js](https://nodejs.org/en/docs/)
+
+---
+
+## Explanation of Code
+
+### Firebase Authentication
+We implemented googles firebase services for our authntication process in order to create and sign in users to the website. We rely on Firebase for authentication to make use of the benefits they provide users in terms or security as well as server reliability.
+
+Additional Firebase documentation located [here](https://firebase.google.com/).
+
+
+### Express npm
+Express NPM is a Node.js web application framework. This framework is used to help develop Node based web applications. The Express framework allows us to set up middlewares that will respond to HTTP requests. Express also allows us to define our routing modules in both the api-routes.js file as well as the html-routes.js file and then using those requests we can dynamically render HTML pages client side to be used in the application. Express is mainly implemented in the server.js file however it references all of the route modules. Express is the framework that allows our client side to communicate with the server side database. 
+
+Additional Express npm documentation located [here](https://expressjs.com/).
+
+
+### JavaScript Libraries
+
+We have implemented the following JavaScript libraries in this project:
+
+[jQuery](https://jquery.com/)
+
+[Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction)
+
+[Google Fonts](https://fonts.google.com/)
+
+[React-to-print](https://www.npmjs.com/package/react-to-print)
+
+### Bootstrap
+We made use of Bootstrap library to quickly iterate and come up with a successful user interface that would be easy to navigate and easy to understand. For more information on Bootstrap check out the [Bootstrap documentation](https://getbootstrap.com/docs/4.1/getting-started/introduction).
+
+### Google Fonts
+We made use of the 'Quicksand' font with the sans-serif style throughout this project. This font gave us a clean legibility and a nice style to compliment the sleek design of out applicaiton.
+
+### React-to-print
+We have mande use of the React-to-print NPM in this application. The React-to-print npm allows us to print off any components that exist in our application. We have implemented this in the printing off of diploma when the user finishes progressing through all of the modules. For more information on React-to-print check out out the [React-to-print documentation](https://www.npmjs.com/package/react-to-print).
+
+## Usage
+
+---
+
+## Contributors
+[Nader Salem](https://github.com/n1flight)
+
+[David E. Sotomayor](https://github.com/DavidESotomayor)
+
+[Matthew Hayden](https://github.com/matthayden09)
+
+[Ryan Conat](https://github.com/Rconat)
+
+---
+
+## Credits
+
+This project was done under Trilogy Education Services through the Northwestern University Coding Bootcamp. The assignment parameters was provided by Trilody Education Services.
+
+---
+
 ## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
