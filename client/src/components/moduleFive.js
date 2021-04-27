@@ -5,7 +5,7 @@ import "../pages/syllabus/syllabus.css"
 // passing in props for the previous page, next page, and quiz redirect
 const ModuleFive = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return(
-        <div className = 'container_syllabus'>
+        <div className = 'container'>
             <div className="row">
                 <h1>Module 5 - Purchasing Cryptocurrencies safely</h1>
                 <hr />

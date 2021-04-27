@@ -45,13 +45,13 @@ const Dashboard = () => {
     return (
         <>
             <Ticker />
-            {dashboardModuleProgress.map(item => {
+            {/* {dashboardModuleProgress.map(item => {
                 return (
                     <div className="progress">
                         <div className="progress-bar progress-bar-striped bg-success" role="progressbar" style={{ width: `${item.width}%` }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 )
-            })}
+            })} */}
             <br />
             <div className="container dashboard-container">
                 <h1 className="heading">DASHBOARD</h1>

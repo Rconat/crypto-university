@@ -2,7 +2,6 @@ import React from 'react'
 //importing in styles
 import "../pages/syllabus/syllabus.css"
 
-
 // passing in props for the previous page, next page, and quiz redirect
 const ModuleThree = ({ switchCurrentModule, quizRedirect, prev, next }) => {
     return (
