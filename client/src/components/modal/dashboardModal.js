@@ -7,16 +7,23 @@ Modal.setAppElement('#root')
 const DashboardModal = () => {
 
     const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [buttonToggle, setButtonToggle] = useState(true)
+    
 
     return (
         <>
-            <div className="modal-button">
-                <button onClick={() => setModalIsOpen(true)}>First time? Click Me</button>
-            </div>
-            
+            {buttonToggle && (
+                <div className="modal-button">
+                    <button onClick={() => setModalIsOpen(true)}>First time? Click Me</button>
+                </div>
+            )}
+
             <Modal
                 isOpen={modalIsOpen}
-                onRequestClose={() => setModalIsOpen(false)}
+                onRequestClose={() =>{
+                    setModalIsOpen(false)
+                    setButtonToggle(false)
+                }}
                 style={
                     {
                         overlay: {
@@ -38,7 +45,10 @@ const DashboardModal = () => {
                 </p>
                 <br />
                 <div className="modal-button">
-                    <button onClick={() => setModalIsOpen(false)}>Close</button>
+                    <button onClick={() => {
+                        setModalIsOpen(false)
+                        setButtonToggle(false)
+                    }}>Close</button>
                 </div>
             </Modal>
         </>
