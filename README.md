@@ -14,6 +14,13 @@ The project is deployed on [Heroku](https://sheltered-garden-64832.herokuapp.com
 
 ---
 
+![Dashboard](client/public/assets/layouts/dashboard_layout.png)
+![Syllabus](client/public/assets/layouts/syllabus_layout.png)
+![Prices](client/public/assets/layouts/prices_layout.png)
+![About](client/public/assets/layouts/about_layout.png)
+
+---
+
 ## Table of Contents
 
 * [MERN Stack](#MERN-Stack)
