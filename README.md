@@ -28,6 +28,7 @@ The project is deployed on [Heroku](https://sheltered-garden-64832.herokuapp.com
     * [Firebase Authentication](#Firebase-Authentication)
     * [Express NPM](#Express-NPM)
     * [JavaScript Libraries](#JavaScript-Libraries)
+    * [Bootstrap](#Bootstrap)
     * [React-to-print](#React-to-print)
     * [Usage](#Usage)
 * [Credits](#Credits)
