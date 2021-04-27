@@ -105,7 +105,7 @@ const Investments = () => {
             ...(item || {}),
             name: item.name,
             price: formatter.format(item.price),
-            change: item['1d']?.price_change ? Number(item['1d']?.price_change).toFixed(2).toLocaleString() : null,
+            change: item['1d']?.price_change_pct ? Number(item['1d']?.price_change_pct).toFixed(2).toLocaleString() : null,
             // change: item['1d'].price_change ? item['1d'].price_change : 'No data found', possibly research other optional chainging options that may do the same thing
             volume: item['1d']?.volume ? formatter.format(item['1d']?.volume) : null,
             marketCap: item.market_cap ? formatter.format(item.market_cap) : null,
