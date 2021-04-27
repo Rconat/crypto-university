@@ -36,7 +36,7 @@ class Diploma extends React.Component {
                         zIndex:2,
                         bottom:"25%",   
                     }}
-                    id="diplomaName">
+                    id="diplomaDate">
                     <h3 
                         style={{
                             paddingLeft:"3rem",
