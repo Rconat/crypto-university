@@ -32,9 +32,9 @@ const Syllabus = () => {
             return API.getUserById(localStorage.getItem('userId'))
         }).then((fetchUser) => {
             if (!!fetchUser) {
-                setToggleEducated(fetchUser.data.educated)
-                setFullName([fetchUser.data.firstName, fetchUser.data.lastName].filter(Boolean).join(' '))
-                console.log(fetchUser.data.firstName, fetchUser.data.lastName);
+                setToggleEducated(fetchUser.data?.educated || false)
+                setFullName([fetchUser.data?.firstName, fetchUser.data?.lastName].filter(Boolean).join(' '))
+                console.log(fetchUser.data?.firstName, fetchUser.data?.lastName);
             }
         })
     }, [])

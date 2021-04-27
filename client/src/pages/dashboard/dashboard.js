@@ -20,20 +20,20 @@ const Dashboard = () => {
             localStorage.getItem('userId') ? API.getUserById(localStorage.getItem('userId')) : Promise.resolve(null)
         ]).then(([fetchSyllabus, fetchUser]) => {
             if (!!fetchUser) {
-                const dashboardProgress = fetchUser.data.modules.reduce((acc, cur) => {
+                const dashboardProgress = fetchUser.data?.modules.reduce((acc, cur) => {
                     const findSyllabus = fetchSyllabus.data.find(item => item._id === cur.syllabus)
                     acc.push({ width: (cur.score / findSyllabus.questions.length) * 100, ...cur })
                     return acc;
                 }, []);
 
                 const syllabi = fetchSyllabus.data.reduce((acc, cur) => {
-                    const findSyllabus = fetchUser.data.modules.find(item => item.syllabus === cur._id);
+                    const findSyllabus = fetchUser.data?.modules.find(item => item.syllabus === cur._id);
                     acc.push({ completed: syllabus.includes(cur._id), width: findSyllabus ? (findSyllabus.score / cur.questions.length) * 100 : 0, ...cur })
                     return acc;
                 }, [])
-                setDashboardModuleProgress(dashboardProgress);
+                setDashboardModuleProgress(dashboardProgress || []);
                 setSyllabus(syllabi)
-                setFullName([fetchUser.data.firstName, fetchUser.data.lastName].filter(Boolean).join(' '))
+                setFullName([fetchUser.data?.firstName, fetchUser.data?.lastName].filter(Boolean).join(' '))
             } else {
                 const syllabi = fetchSyllabus.data.map(item => ({ ...item, completed: false }))
                 setSyllabus(syllabi)
