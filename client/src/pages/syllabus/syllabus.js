@@ -95,6 +95,7 @@ const Syllabus = () => {
             <div id="top" style={{ display: 'flex', justifyContent: 'flex-start' }}>
                 {CurrentComponent[currentModule](quizId)}
             </div>
+            <br/>
             {toggleEducated && (
                 <>
                     <div style={{ position: "absolute", left: -2000 }}>
@@ -108,9 +109,10 @@ const Syllabus = () => {
                             setDiplomaVisable(false)
                         }, 500)
                     }
-                    }>Print this out!</CustomButton>
+                    }>Print</CustomButton>
                 </>
             )}
+            <br/>
         </>
     )
 }

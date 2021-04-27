@@ -81,13 +81,6 @@ const Dashboard = () => {
     return (
         <>
             <Ticker />
-            {/* {dashboardModuleProgress.map(item => {
-                return (
-                    <div className="progress">
-                        <div className="progress-bar progress-bar-striped bg-success" role="progressbar" style={{ width: `${item.width}%` }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                )
-            })} */}
             <br />
             <div className="container dashboard-container">
                 <h1 className="heading">DASHBOARD</h1>
@@ -98,7 +91,6 @@ const Dashboard = () => {
                 <br />
                 <div className="container progress-container">
                     <h3 className="your-progress">Your Progress</h3>
-                    {/* <br /> */}
                     <div className="col dashboard-row">
                         {syllabus.map(item => {
                             return (
@@ -130,6 +122,8 @@ const Dashboard = () => {
                         <Diploma ref={componentRef} fullName={fullName} />
                     </div>
                     <h2 style={{
+                        fontFamily:"Quicksand, sans-serif",
+                        fontWeight:"bold",
                         paddingTop:"30px",
                         color:"black",
                         display:"flex",
@@ -151,6 +145,7 @@ const Dashboard = () => {
                 </>
             )}
 
+            <br/>
         </>
     )
 }
