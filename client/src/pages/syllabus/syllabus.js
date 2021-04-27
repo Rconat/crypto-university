@@ -11,8 +11,21 @@ import ModuleTwo from "../../components/moduleTwo"
 import ModuleThree from "../../components/moduleThree"
 import ModuleFour from "../../components/moduleFour"
 import ModuleFive from "../../components/moduleFive"
+import styled from "styled-components"
 //importing in styles
 import "./syllabus.css"
+
+const CustomButton = styled.button`
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    color: black;
+    background-color: #b8de6f;
+    font-family: 'Quicksand', sans-serif;
+    width: 200px;
+
+    &:hover{background-color: #f1e189;}
+`
 
 const Syllabus = () => {
     const history = useHistory(); // window.history
@@ -85,16 +98,17 @@ const Syllabus = () => {
             {toggleEducated && (
                 <>
                     <div style={{ position: "absolute", left: -2000 }}>
-                        <Diploma ref={componentRef} />
+                        <Diploma ref={componentRef} fullName={fullName} />
                     </div>
-                    <button onClick={() => {
+                    <h3 style={{color:"black"}}>Print out your diploma!</h3>
+                    <CustomButton onClick={() => {
                         setDiplomaVisable(true)
                         setTimeout(() => {
                             handlePrint()
                             setDiplomaVisable(false)
                         }, 500)
                     }
-                    }>Print this out!</button>
+                    }>Print this out!</CustomButton>
                 </>
             )}
         </>
