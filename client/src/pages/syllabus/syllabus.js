@@ -85,7 +85,7 @@ const Syllabus = () => {
             {toggleEducated && (
                 <>
                     <div style={{ position: "absolute", left: -2000 }}>
-                        <Diploma ref={componentRef} />
+                        <Diploma ref={componentRef} fullName={fullName} />
                     </div>
                     <button onClick={() => {
                         setDiplomaVisable(true)

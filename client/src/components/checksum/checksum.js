@@ -26,6 +26,7 @@ function Checksum() {
         if (userEntry === remainder) {
             setUserScore(userScore + 1)
             generateRandomNums()
+            setUserEntry(null)
         } else {
             generateRandomNums()
         }

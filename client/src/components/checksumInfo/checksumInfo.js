@@ -30,9 +30,6 @@ const ChecksumInfo = () => {
                 <br />
                 <p>&emsp;The checksum verification is a very basic version of one way that data is can be verified over a blockchain. In reality the data hashing is oftentimes continually changing and the algorithms that are used in the verification are much more complex than a simple checksum. However for our purposes this will give a basic understanding of some of the processes which a blockchain can do to verify the data when generating a new block. Try out the game below and display your knew knowledge of the checksum verification.</p>
                 <br />
-                <h3 id="game-start">To complete this game try to complete a checksum verification for at least 10 different sets of hashed data</h3>
-                <br />
-                <button id="start-check-btn">Start</button>
             </div>
         </div>
     )
