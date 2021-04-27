@@ -61,7 +61,7 @@ input {
     color: white;
     transition-duration: 0.25s;
 	font-weight: 300;
-	opacity: 75%;
+	opacity: .75;
 	font-family: 'Quicksand', sans-serif;
 }
 
@@ -87,7 +87,7 @@ button {
 	font-size: 18px;
 	transition-duration: 0.25s;
 	color: #01c5c4;
-	opacity: 90%;
+	opacity: .9;
 	font-family: 'Quicksand', sans-serif;
 }
 
