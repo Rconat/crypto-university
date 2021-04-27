@@ -89,7 +89,7 @@ body {
 }
 
 .module-btn {
-    display: inline;
+    display: block;
     justify-content: center;
     margin: auto;
     color: black;
@@ -103,6 +103,7 @@ body {
 }
 
 .button-div {
+    justify-content: center;
     padding: 50px;
     display: flex;
     margin: auto;

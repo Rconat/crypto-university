@@ -18,6 +18,34 @@ const ModuleFiveQuestions = () => {
                 'False'
             ],
         },
+        {
+            questionText: "Who sets the price of a cryptocurrency in a P2P exchange?",
+            correctAnswer: "The seller",
+            answers: [
+                'The exchange',
+                'The buyer',
+                'The seller',
+                'Elon Musk'
+            ],
+        },
+        {
+            questionText: "Who sets the price of a cryptocurrency in a Cyptocurrency exchange?",
+            correctAnswer: "The exchange",
+            answers: [
+                'The exchange',
+                'The buyer',
+                'The seller',
+                'Elon Musk'
+            ],
+        },
+        {
+            questionText: "Storing your wallet information on a physical harddrive is a foolproof way to maintain your cryptocurrencies",
+            correctAnswer: "False",
+            answers: [
+                'True',
+                'False'
+            ],
+        },
     ]
 }
 
