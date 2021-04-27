@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { useAuth } from '../../contexts/AuthContext'
 import Ticker from '../../components/ticker/ticker'
 import DashboardModal from '../../components/modal/dashboardModal'
@@ -11,7 +12,7 @@ const Dashboard = () => {
     const [syllabus, setSyllabus] = useState([])
     const [fullName, setFullName] = useState('')
     const { currentUser } = useAuth()
-
+    const history = useHistory()
     // grabs the user id from localStorage and looks at the current progress the user has
     // also renders all modules in the syllabus
     useEffect(() => {
@@ -63,19 +64,24 @@ const Dashboard = () => {
                 <div className="container progress-container">
                     <h3 className="your-progress">Your Progress</h3>
                     {/* <br /> */}
-                    <div className="row dashboard-row">
+                    <div className="col dashboard-row">
                         {syllabus.map(item => {
                             return (
-                                <>
-                                    <div className="col module-col">
-                                        <Link to="/syllabus">
-                                            <button className="module-btn" style={item.completed ? { background: 'green' } : {}}>{item.title}</button>
-                                        </Link>
-                                    </div>
-                                    <div className="progress">
+                                <div className="col module-col"> 
+                                    <div className="progress progressBarCustomStyling">
                                         <div className="progress-bar progress-bar-striped bg-success" role="progressbar" style={{ width: `${item.width}%` }} aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                                     </div>
-                                </>
+                                    <button 
+                                        className="module-btn" 
+                                        style={item.completed ? { background: 'green' } : {}}
+                                        onClick={(event) => {
+                                            event.preventDefault()
+                                            history.push(`/quiz/${item._id}`)
+                                        }}
+                                    >
+                                        {item.title}
+                                    </button>
+                                </div>
                             )
                         })}
                     </div>
