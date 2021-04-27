@@ -30,18 +30,19 @@ module.exports = {
     updateUser: async (req, res) => {
         try {
             const data = await User.findById(req.params.id);
+            const filteredModules = data.modules.filter(item => `${item.syllabus}` !== req.body.syllabus)
             const newData = await User.updateOne({ "_id": ObjectID(req.params.id) }, {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 educated: req.body.educated,
                 ...!!req.body.syllabus ? {
                     modules: [
-                        ...(data.modules || []),
                         {
                             syllabus: req.body.syllabus,
                             completed: req.body.completed,
                             score: req.body.score
-                        }
+                        },
+                        ...(filteredModules || [])
                     ]
                 } : null
             });
