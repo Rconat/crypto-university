@@ -16,7 +16,11 @@ const Ticker = () => {
             }
             currentId.current = requestId;
             if (mounted) {
-                setPrices(response.data)
+                if (Array.isArray(response.data)) {
+                    setPrices((response.data || []))
+                } else {
+                    setPrices([])
+                }
             }
         }).catch(console.log)
         return () => {
