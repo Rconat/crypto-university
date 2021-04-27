@@ -97,7 +97,7 @@ button {
 	border: 0;
 	padding: 10px 15px;
 	border-radius: 3px;
-	width: 250px;
+	/* width: 250px; */
 	cursor: pointer;
 	font-size: 18px;
 	transition-duration: 0.25s;
